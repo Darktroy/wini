@@ -1,0 +1,10 @@
+[
+    {
+        "model-name": "q_answer",
+        "resource-file": "q_answers.json"
+    },
+    {
+        "model-name": "question_to_user",
+        "resource-file": "question_to_users.json"
+    }
+]

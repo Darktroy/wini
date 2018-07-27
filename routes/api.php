@@ -14,7 +14,9 @@ use Illuminate\Http\Request;
 */
 //use Illuminate\Http\Request;
 Route::post('login', 'API\AuthController@login');
+Route::post('login-by-mobile', 'API\AuthController@loginMobile');
 Route::post('register', 'API\AuthController@register');
+Route::post('register-mobile', 'API\AuthController@registerMobile');
 Route::middleware('auth:api')->group(function(){
   Route::post('details', 'API\AuthController@getDetails');
   Route::post('test', 'testing@index');

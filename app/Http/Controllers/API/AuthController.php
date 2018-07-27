@@ -30,6 +30,22 @@
         } 
       }
         
+      public function loginMobile(Request $request){ 
+        if(Auth::attempt(['mobile' => $request->email, 'password' => $request->password])){ 
+          $user = Auth::user(); 
+          $success['token'] =  $user->createToken('LaraPassport')->accessToken; 
+          return response()->json([
+            'status' => 'success',
+            'data' => $success
+          ]); 
+        } else { 
+          return response()->json([
+            'status' => 'error',
+            'data' => 'Unauthorized Access'
+          ]); 
+        } 
+      }
+      
       /** 
        * Register API 
        * 
@@ -42,6 +58,29 @@
           'email' => 'required|email', 
           'password' => 'required', 
           'c_password' => 'required|same:password', 
+        ]);
+        if ($validator->fails()) { 
+          return response()->json(['error'=>$validator->errors()]);
+        }
+        $postArray = $request->all(); 
+        $postArray['password'] = bcrypt($postArray['password']); 
+        $user = User::create($postArray); 
+        $success['token'] =  $user->createToken('LaraPassport')->accessToken; 
+        $success['name'] =  $user->name;
+        return response()->json([
+          'status' => 'success',
+          'data' => $success,
+        ]); 
+      }
+      
+      public function registerMobile(Request $request) 
+      { 
+        $validator = Validator::make($request->all(), [ 
+            'name' => 'required', 
+            'email' => 'required|email|unique:users', 
+            'password' => 'required', 
+            'c_password' => 'required|same:password', 
+            'mobile' => 'required|int|unique:users',
         ]);
         if ($validator->fails()) { 
           return response()->json(['error'=>$validator->errors()]);
