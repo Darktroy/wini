@@ -6,11 +6,18 @@ use App\Models\q_answer;
 use App\Models\Question;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+    use Illuminate\Support\Facades\Auth; 
+    use App\User; 
+    use Illuminate\Support\Facades\DB;
 use Exception;
-
+use Validator;
+ 
 class QAnswersController extends Controller
 {
-
+    public $successStatus = 200;
+    public function __construct() {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the q answers.
      *
@@ -57,6 +64,37 @@ class QAnswersController extends Controller
 
             return back()->withInput()
                          ->withErrors(['unexpected_error' => 'Unexpected error occurred while trying to process your request!']);
+        }
+    }
+    public function answerQuestion(Request $request)
+    {
+        $rules = ['questions_id' => 'required|int|exists:questions,questions_id',];
+        
+        $messages =[ 'questions_id.required' => 'please enter rigth data ', ];
+        $data = Validator::make($request->all(), $rules, $messages);
+        
+        if($data->fails()){
+                $data = (array)$data->errors()->all();
+                return response()->json(['message'=>$data,'code'=>403], $this->successStatus);
+        }
+        try {
+            $data = $request->all();
+            $doesAnswerTRigth =q_answer::where('questions_id',$data['questions_id'])
+                    ->where('answer',$data['answer'])->get();
+            if(count($doesAnswerTRigth)>0){
+                DB::beginTransaction();
+                $user = Auth::user(); 
+                User::where('id',$user->id)->increment('score',1);
+                DB::commit();
+                return response()->json(['data'=>1,'sucess'=>true,'message'=>'Rigth answer Bravo','code'=>200], $this->successStatus);
+            } else {
+                return response()->json(['data'=>0,'sucess'=>FALSE,'message'=>'wrong answer Bravo','code'=>401], $this->successStatus);
+            }
+
+        } catch (Exception $exception) {
+            DB::rollBack(); 
+            return response()->json(['message' => $exception->getMessage(),'code'=>500 ], 200);
+            
         }
     }
 

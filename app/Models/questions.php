@@ -3,6 +3,9 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
+use App\Models\question_to_user;
+use Exception;
 
 class questions extends Model
 {
@@ -49,7 +52,26 @@ class questions extends Model
      */
     protected $casts = [];
     
-
+    public function getNewQuestion($user_id) {
+        $questionTakenRow = question_to_user::select('questions_id')
+                ->where('user_id',$user_id)->get();
+        $questionTaken = [];
+        $question = '';
+        if(count($questionTakenRow)==0){
+            
+        } else {
+            foreach ($questionTakenRow as $key => $value) {
+                $questionTaken[] = $value['questions_id'];
+            }
+        }
+        $question_row = self::whereNotIn('questions_id',$questionTaken)->get();
+        if(count($question_row)>0){
+            $question = $question_row[0];
+            question_to_user::insert(array('questions_id' => $question->questions_id, 
+                'user_id'=>$user_id));
+        }
+        return $question;
+    }
 
 
 }

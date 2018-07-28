@@ -5,11 +5,17 @@ namespace App\Http\Controllers;
 use App\Models\questions;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+    use Illuminate\Support\Facades\Auth; 
+    use App\User; 
+    use Illuminate\Support\Facades\DB;
 use Exception;
 
 class QuestionsController extends Controller
 {
-
+    public $successStatus = 200;
+    public function __construct() {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the questions.
      *
@@ -22,6 +28,23 @@ class QuestionsController extends Controller
         return view('questions.index', compact('questionsObjects'));
     }
 
+    public function getOne() {
+        try {
+            DB::beginTransaction();
+            $user = Auth::user(); 
+            $quetion_obj = new questions();
+            $quetion = $quetion_obj->getNewQuestion($user->id);
+            DB::commit();
+            return response()->json(['data'=>$quetion,'code'=>200], $this->successStatus);
+        } catch (Exception $exc) {
+            DB::rollBack(); 
+            return response()->json(['message' => $exception->getMessage(),'code'=>500 ], 200);
+        }
+
+        
+//dd($questionTaken[]);
+        
+    }
     /**
      * Show the form for creating a new questions.
      *
