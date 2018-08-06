@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,50 +13,41 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
+
+Route::middleware('auth:web')->group(function(){
+    
+//        Route::get('', function () {
+//                 dd('q23 '.__FILE__);   
+//            });
+        Route::group(['prefix' => 'questions',], function () {
+//            dd('24 '.__FILE__);questions
+//              dd('25 '.__FILE__);
+
+//            Route::any('', 'QuestionsController@index')->name('questions.questions.index');
+            
+            Route::get('', 'QuestionsController@index')->name('questions.questions.index');
+        //    Route::get('/', 'QuestionsController@index')->name('questions.questions.index');
+        //
+            Route::get('/create','QuestionsController@create')->name('questions.questions.create');
+
+            Route::get('/show/{questions}','QuestionsController@show')->name('questions.questions.show')->where('id', '[0-9]+');
+
+            Route::get('/{questions}/edit','QuestionsController@edit')->name('questions.questions.edit')->where('id', '[0-9]+');
+
+            Route::post('/', 'QuestionsController@store')->name('questions.questions.store');
+
+            Route::put('questions/{questions}', 'QuestionsController@update')->name('questions.questions.update')->where('id', '[0-9]+');
+
+            Route::delete('/questions/{questions}','QuestionsController@destroy')->name('questions.questions.destroy')->where('id', '[0-9]+');
+
+//        dd('50 '.__FILE__);
+        });
+
+    
+});
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::group(
-[
-    'prefix' => 'questions',
-], function () {
-
-    Route::get('/', 'QuestionsController@index')
-         ->name('questions.questions.index');
-
-    Route::get('/create','QuestionsController@create')
-         ->name('questions.questions.create');
-
-    Route::get('/show/{questions}','QuestionsController@show')
-         ->name('questions.questions.show')
-         ->where('id', '[0-9]+');
-
-    Route::get('/{questions}/edit','QuestionsController@edit')
-         ->name('questions.questions.edit')
-         ->where('id', '[0-9]+');
-
-    Route::post('/', 'QuestionsController@store')
-         ->name('questions.questions.store');
-               
-    Route::put('questions/{questions}', 'QuestionsController@update')
-         ->name('questions.questions.update')
-         ->where('id', '[0-9]+');
-
-    Route::delete('/questions/{questions}','QuestionsController@destroy')
-         ->name('questions.questions.destroy')
-         ->where('id', '[0-9]+');
-
-});
-
-Route::group(
-[
-    'prefix' => 'q_answers',
-], function () {
+Route::group(['prefix' => 'q_answers',], function () {
 
     Route::get('/', 'QAnswersController@index')
          ->name('q_answers.q_answer.index');
@@ -83,10 +76,7 @@ Route::group(
 
 });
 
-Route::group(
-[
-    'prefix' => 'question_to_users',
-], function () {
+Route::group([ 'prefix' => 'question_to_users',], function () {
 
     Route::get('/', 'QuestionToUsersController@index')
          ->name('question_to_users.question_to_user.index');
@@ -114,3 +104,8 @@ Route::group(
          ->where('id', '[0-9]+');
 
 });
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+Route::get('/home', 'HomeController@index')->name('home');

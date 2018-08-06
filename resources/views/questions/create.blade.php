@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('content')
@@ -27,8 +28,10 @@
                     @endforeach
                 </ul>
             @endif
-
-            <form method="POST" action="{{ route('questions.questions.store') }}" accept-charset="UTF-8" id="create_questions_form" name="create_questions_form" class="form-horizontal">
+          
+            <form method="POST" action="{{ route('questions.questions.store') }}" 
+                  accept-charset="UTF-8" id="create_questions_form" name="create_questions_form" 
+                  class="form-horizontal">
             {{ csrf_field() }}
             @include ('questions.form', [
                                         'questions' => null,
@@ -44,7 +47,7 @@
 
         </div>
     </div>
-
+  
 @endsection
 
 

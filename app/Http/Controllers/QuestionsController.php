@@ -24,7 +24,6 @@ class QuestionsController extends Controller
     public function index()
     {
         $questionsObjects = questions::paginate(25);
-
         return view('questions.index', compact('questionsObjects'));
     }
 
@@ -52,8 +51,6 @@ class QuestionsController extends Controller
      */
     public function create()
     {
-        
-        
         return view('questions.create');
     }
 
