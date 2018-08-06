@@ -21,7 +21,9 @@ Route::middleware('auth:api')->group(function(){
   Route::post('details', 'API\AuthController@getDetails');
   Route::post('test', 'testing@index');
   Route::post('get-question', 'QuestionsController@getone');
+  Route::get('get-question', 'QuestionsController@getone');
   Route::post('send-answer', 'QAnswersController@answerQuestion');
+  Route::get('send-answer', 'QAnswersController@answerQuestion');
   
 });
 //Auth::routes();

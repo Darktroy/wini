@@ -1,0 +1,1594 @@
+{
+	"info": {
+		"name": "Win top",
+		"_postman_id": "38443f2f-ecd6-e01e-10b2-ead7d5f08dda",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"description": "",
+			"item": [
+				{
+					"name": "Log in as admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "eng.iessa.mostafa@gmail.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "po23mn!@",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "admin",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "wintop-admin",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "winnerten.com/wini/public/api/login",
+							"host": [
+								"winnerten.com/wini/public/api/login"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "test",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQ4NmQ3NTRlYTJiMTI1NjU0ZWE3NzVkM2UyODAzZjBjOTFiNWQ2M2ExNjBjN2UwYmM4ZmMzOWRhMmEwNjE4MDQxMjc4ODYwOTMzMGIwMTc3In0.eyJhdWQiOiIxIiwianRpIjoiNDg2ZDc1NGVhMmIxMjU2NTRlYTc3NWQzZTI4MDNmMGM5MWI1ZDYzYTE2MGM3ZTBiYzhmYzM5ZGEyYTA2MTgwNDEyNzg4NjA5MzMwYjAxNzciLCJpYXQiOjE1MzI0MzIwNTIsIm5iZiI6MTUzMjQzMjA1MiwiZXhwIjoxNTYzOTY4MDUyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Q2Agt5TpmNYsZ9phaYMux4ucyoxlN5en1nIj45IaysfVEd3iA4uOQJXNM8QKIecrcDTLcGFlOqDQxV0HmG4zN5oNs58L_cMsOVBl0aumYr4yrx7LWdWYiukH4Hwkj57rzK75YmdytvPpQACfm421qPWWeUtvSOlsJmbfyUo_w2omrsS8NURiBjJxY4lC3asfbPb8lMK_Z9X05TrnYNDj75fAEoS_ZGZfykXJ7NG9RnPYJ8hCt4dEM97HGFgiXUmhFXhP_bcDrcf4qmMsVARJtxd0AHnsaGVSHDUeWUaDsPdgHf7J-yfZZ9el_w9dbjasVK_mBTRAGMu1qW0zYXu3EnVzWkBIWuB6JK0ovw91qim6X23Gbv6XRQMEDyCUWGZ4zw3kJWmMySQvGwsn4bxDg4VszESp0QeCTAWtFZXCzCGHX64pWMYngdEPW_O2hQhSr6lVWXgm0XU_cYBRnwtYDJNnWAImf_vrfxscG8gqC97_QbIOKO1UozCY5loE758O1IaJ85HfRRmodIcNCXI5rbbcqaalX8lUB2PKbCx9W3dmYlemrN3w1ZhvBvQ8ptINQcTrwC1E6CJcQeuFSa6tlQsOuEwWOBU2GHDwXEbbRzdhheMJLUj6tbXfCdKFSv22m6zqTitvk02qxd7SwTt_Adq-KzZivVCvf_TxPb87zOg"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "winnerten.com/wini/public/api/test",
+							"host": [
+								"winnerten.com/wini/public/api/test"
+							]
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "82d849d1-7a76-4877-a834-93ebb71df42c",
+							"name": "All tickets",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"disabled": false
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjkzM2NkMTMzODU4MjEzMTIyYTU4Y2MzNTc5ZTFkNDQzZTMzYzA3ZWYwNDRhZWNiNDVkZjA5MTU4ZGZmOGE0MTA1YWM2YWVhN2Q1NGM2YTM1In0.eyJhdWQiOiIxIiwianRpIjoiOTMzY2QxMzM4NTgyMTMxMjJhNThjYzM1NzllMWQ0NDNlMzNjMDdlZjA0NGFlY2I0NWRmMDkxNThkZmY4YTQxMDVhYzZhZWE3ZDU0YzZhMzUiLCJpYXQiOjE1MjU4NzM0MzgsIm5iZiI6MTUyNTg3MzQzOCwiZXhwIjoxNTU3NDA5NDM4LCJzdWIiOiI5Iiwic2NvcGVzIjpbXX0.AITVbNa9eUCM7eZzD1rD2uMYHqxiO3uoIT_HeNR6PmFCtMdTxfvRwKUq3QeyjLFTuoQbfciHSiW4TOYzap2dlRhUhiSKviLeInv63HnA9XHgBG55-GU81mLGwzjsXJVvV6ZyfW9G5Ir4E4IHLbu2UjrOf5l-Po1oevTuGt3zGBCwFgb_3ljJpqSo62og3d1cC09RA_H-L54m3s5pGLoJZaJ_9TbVlXOAo5IDljpCDHcOdMIDnv0pKb9Jy06p_87ewqFIPg3K7GM5JEvvsAkE7y9c1KN7cG_LBO3fgPbnd2Dbd1E_bnVshU84l7w7SCHNitX2IDa3C5srmtqWpF9O51rzLDvdUWgLIhFIONroHlY3rHC9Aj6dIJHFKv0Q4qYfsjHHyl5MuvnJ9DcsZ4lQD1XteQfrNqaZoSjYTfxpgbI2M8I_GBEdRqcXYjMx0eBttSquSyRZ84_n9lqMourUPBcB-oaE_Q6J5E8zt6p4o8H3JAo5EERE7B9j_V-UX6Jiv9iR7XOpqKAamrYTE2JfH5AssJLyXqSANZf3e7QEC6yV3_iw_z0s59rf6YDBqdVMgdrNaET_xXeOttu4tP3CmifsxTNrWi4XUSTaklg27VpDHe3hjFUfuN7zhnLTdIGA9XcMyQavhVZy35-EMuXf8Z76200Jk003rMsUVtHXkM4",
+										"disabled": false
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{gvs-domain}}api/tickets",
+									"host": [
+										"{{gvs-domain}}api"
+									],
+									"path": [
+										"tickets"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Jun 2018 10:52:35 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100",
+									"name": "Keep-Alive",
+									"description": "Custom header"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.28 (Unix) OpenSSL/1.0.2l PHP/7.1.10 mod_perl/2.0.8-dev Perl/v5.16.3",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization",
+									"name": "Vary",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.1.10",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60",
+									"name": "X-RateLimit-Limit",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59",
+									"name": "X-RateLimit-Remaining",
+									"description": "Custom header"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\"ticket\":{\"current_page\":1,\"data\":[{\"ticket_id\":1,\"grades_id\":1,\"gvs_classes_id\":1,\"requister_user_id\":1,\"requister_type\":\"teacher\",\"requister_name\":\"elkalb ebn elkalb\",\"reciver_user_id\":1,\"reciver_type\":\"guardien\",\"reciver_name\":\"ebn el kab el tany\",\"priority_id\":0,\"status_id\":0,\"created_at\":\"2018-06-03 12:16:09\",\"updated_at\":\"2018-06-03 12:16:09\",\"deleted_at\":null,\"description\":\"7at edoh 3la waste\",\"ticket\":{\"ticket_id\":1,\"grades_id\":1,\"gvs_classes_id\":1,\"requister_user_id\":1,\"requister_type\":\"teacher\",\"requister_name\":\"elkalb ebn elkalb\",\"reciver_user_id\":1,\"reciver_type\":\"guardien\",\"reciver_name\":\"ebn el kab el tany\",\"priority_id\":0,\"status_id\":0,\"created_at\":\"2018-06-03 12:16:09\",\"updated_at\":\"2018-06-03 12:16:09\",\"deleted_at\":null,\"description\":\"7at edoh 3la waste\"},\"grade\":null,\"gvsclass\":{\"gvs_classes_id\":1,\"name\":\"class_name_test\",\"grades_id\":4,\"created_at\":\"2018-06-10 08:52:47\",\"updated_at\":\"2018-06-10 08:52:47\",\"deleted_at\":null},\"requisteruser\":{\"id\":1,\"name\":\"amr\",\"email\":\"amr@soleeklab.com\",\"mobile\":\"01095594471\",\"user_type\":\"guardien\",\"created_at\":\"2018-05-09 13:04:33\",\"updated_at\":\"2018-06-13 19:24:24\"},\"reciveruser\":{\"id\":1,\"name\":\"amr\",\"email\":\"amr@soleeklab.com\",\"mobile\":\"01095594471\",\"user_type\":\"guardien\",\"created_at\":\"2018-05-09 13:04:33\",\"updated_at\":\"2018-06-13 19:24:24\"}},{\"ticket_id\":2,\"grades_id\":1,\"gvs_classes_id\":1,\"requister_user_id\":1,\"requister_type\":\"teacher\",\"requister_name\":\"elkalb ebn elkalb\",\"reciver_user_id\":1,\"reciver_type\":\"guardien\",\"reciver_name\":\"ebn el kab el tany\",\"priority_id\":0,\"status_id\":0,\"created_at\":\"2018-06-03 12:16:39\",\"updated_at\":\"2018-06-03 12:16:39\",\"deleted_at\":null,\"description\":\"7at edoh 3la waste\",\"ticket\":{\"ticket_id\":2,\"grades_id\":1,\"gvs_classes_id\":1,\"requister_user_id\":1,\"requister_type\":\"teacher\",\"requister_name\":\"elkalb ebn elkalb\",\"reciver_user_id\":1,\"reciver_type\":\"guardien\",\"reciver_name\":\"ebn el kab el tany\",\"priority_id\":0,\"status_id\":0,\"created_at\":\"2018-06-03 12:16:39\",\"updated_at\":\"2018-06-03 12:16:39\",\"deleted_at\":null,\"description\":\"7at edoh 3la waste\"},\"grade\":null,\"gvsclass\":{\"gvs_classes_id\":1,\"name\":\"class_name_test\",\"grades_id\":4,\"created_at\":\"2018-06-10 08:52:47\",\"updated_at\":\"2018-06-10 08:52:47\",\"deleted_at\":null},\"requisteruser\":{\"id\":1,\"name\":\"amr\",\"email\":\"amr@soleeklab.com\",\"mobile\":\"01095594471\",\"user_type\":\"guardien\",\"created_at\":\"2018-05-09 13:04:33\",\"updated_at\":\"2018-06-13 19:24:24\"},\"reciveruser\":{\"id\":1,\"name\":\"amr\",\"email\":\"amr@soleeklab.com\",\"mobile\":\"01095594471\",\"user_type\":\"guardien\",\"created_at\":\"2018-05-09 13:04:33\",\"updated_at\":\"2018-06-13 19:24:24\"}},{\"ticket_id\":3,\"grades_id\":1,\"gvs_classes_id\":1,\"requister_user_id\":1,\"requister_type\":\"teacher\",\"requister_name\":\"elkalb ebn elkalb\",\"reciver_user_id\":1,\"reciver_type\":\"guardien\",\"reciver_name\":\"ebn el kab el tany\",\"priority_id\":0,\"status_id\":0,\"created_at\":\"2018-06-03 12:16:44\",\"updated_at\":\"2018-06-03 12:16:44\",\"deleted_at\":null,\"description\":\"7at edoh 3la waste\",\"ticket\":{\"ticket_id\":3,\"grades_id\":1,\"gvs_classes_id\":1,\"requister_user_id\":1,\"requister_type\":\"teacher\",\"requister_name\":\"elkalb ebn elkalb\",\"reciver_user_id\":1,\"reciver_type\":\"guardien\",\"reciver_name\":\"ebn el kab el tany\",\"priority_id\":0,\"status_id\":0,\"created_at\":\"2018-06-03 12:16:44\",\"updated_at\":\"2018-06-03 12:16:44\",\"deleted_at\":null,\"description\":\"7at edoh 3la waste\"},\"grade\":null,\"gvsclass\":{\"gvs_classes_id\":1,\"name\":\"class_name_test\",\"grades_id\":4,\"created_at\":\"2018-06-10 08:52:47\",\"updated_at\":\"2018-06-10 08:52:47\",\"deleted_at\":null},\"requisteruser\":{\"id\":1,\"name\":\"amr\",\"email\":\"amr@soleeklab.com\",\"mobile\":\"01095594471\",\"user_type\":\"guardien\",\"created_at\":\"2018-05-09 13:04:33\",\"updated_at\":\"2018-06-13 19:24:24\"},\"reciveruser\":{\"id\":1,\"name\":\"amr\",\"email\":\"amr@soleeklab.com\",\"mobile\":\"01095594471\",\"user_type\":\"guardien\",\"created_at\":\"2018-05-09 13:04:33\",\"updated_at\":\"2018-06-13 19:24:24\"}},{\"ticket_id\":4,\"grades_id\":1,\"gvs_classes_id\":1,\"requister_user_id\":1,\"requister_type\":\"teacher\",\"requister_name\":\"elkalb ebn elkalb\",\"reciver_user_id\":1,\"reciver_type\":\"guardien\",\"reciver_name\":\"ebn el kab el tany\",\"priority_id\":0,\"status_id\":0,\"created_at\":\"2018-06-03 12:16:46\",\"updated_at\":\"2018-06-03 12:16:46\",\"deleted_at\":null,\"description\":\"7at edoh 3la waste\",\"ticket\":{\"ticket_id\":4,\"grades_id\":1,\"gvs_classes_id\":1,\"requister_user_id\":1,\"requister_type\":\"teacher\",\"requister_name\":\"elkalb ebn elkalb\",\"reciver_user_id\":1,\"reciver_type\":\"guardien\",\"reciver_name\":\"ebn el kab el tany\",\"priority_id\":0,\"status_id\":0,\"created_at\":\"2018-06-03 12:16:46\",\"updated_at\":\"2018-06-03 12:16:46\",\"deleted_at\":null,\"description\":\"7at edoh 3la waste\"},\"grade\":null,\"gvsclass\":{\"gvs_classes_id\":1,\"name\":\"class_name_test\",\"grades_id\":4,\"created_at\":\"2018-06-10 08:52:47\",\"updated_at\":\"2018-06-10 08:52:47\",\"deleted_at\":null},\"requisteruser\":{\"id\":1,\"name\":\"amr\",\"email\":\"amr@soleeklab.com\",\"mobile\":\"01095594471\",\"user_type\":\"guardien\",\"created_at\":\"2018-05-09 13:04:33\",\"updated_at\":\"2018-06-13 19:24:24\"},\"reciveruser\":{\"id\":1,\"name\":\"amr\",\"email\":\"amr@soleeklab.com\",\"mobile\":\"01095594471\",\"user_type\":\"guardien\",\"created_at\":\"2018-05-09 13:04:33\",\"updated_at\":\"2018-06-13 19:24:24\"}},{\"ticket_id\":5,\"grades_id\":1,\"gvs_classes_id\":1,\"requister_user_id\":1,\"requister_type\":\"teacher\",\"requister_name\":\"elkalb ebn elkalb\",\"reciver_user_id\":1,\"reciver_type\":\"guardien\",\"reciver_name\":\"ebn el kab el tany\",\"priority_id\":0,\"status_id\":0,\"created_at\":\"2018-06-03 12:25:26\",\"updated_at\":\"2018-06-03 12:25:26\",\"deleted_at\":null,\"description\":\"7at edoh 3la waste\",\"ticket\":{\"ticket_id\":5,\"grades_id\":1,\"gvs_classes_id\":1,\"requister_user_id\":1,\"requister_type\":\"teacher\",\"requister_name\":\"elkalb ebn elkalb\",\"reciver_user_id\":1,\"reciver_type\":\"guardien\",\"reciver_name\":\"ebn el kab el tany\",\"priority_id\":0,\"status_id\":0,\"created_at\":\"2018-06-03 12:25:26\",\"updated_at\":\"2018-06-03 12:25:26\",\"deleted_at\":null,\"description\":\"7at edoh 3la waste\"},\"grade\":null,\"gvsclass\":{\"gvs_classes_id\":1,\"name\":\"class_name_test\",\"grades_id\":4,\"created_at\":\"2018-06-10 08:52:47\",\"updated_at\":\"2018-06-10 08:52:47\",\"deleted_at\":null},\"requisteruser\":{\"id\":1,\"name\":\"amr\",\"email\":\"amr@soleeklab.com\",\"mobile\":\"01095594471\",\"user_type\":\"guardien\",\"created_at\":\"2018-05-09 13:04:33\",\"updated_at\":\"2018-06-13 19:24:24\"},\"reciveruser\":{\"id\":1,\"name\":\"amr\",\"email\":\"amr@soleeklab.com\",\"mobile\":\"01095594471\",\"user_type\":\"guardien\",\"created_at\":\"2018-05-09 13:04:33\",\"updated_at\":\"2018-06-13 19:24:24\"}},{\"ticket_id\":6,\"grades_id\":1,\"gvs_classes_id\":1,\"requister_user_id\":1,\"requister_type\":\"teacher\",\"requister_name\":\"elkalb ebn elkalb\",\"reciver_user_id\":1,\"reciver_type\":\"guardien\",\"reciver_name\":\"ebn el kab el tany\",\"priority_id\":0,\"status_id\":0,\"created_at\":\"2018-06-03 12:25:34\",\"updated_at\":\"2018-06-03 12:25:34\",\"deleted_at\":null,\"description\":\"7at edoh 3la waste\",\"ticket\":{\"ticket_id\":6,\"grades_id\":1,\"gvs_classes_id\":1,\"requister_user_id\":1,\"requister_type\":\"teacher\",\"requister_name\":\"elkalb ebn elkalb\",\"reciver_user_id\":1,\"reciver_type\":\"guardien\",\"reciver_name\":\"ebn el kab el tany\",\"priority_id\":0,\"status_id\":0,\"created_at\":\"2018-06-03 12:25:34\",\"updated_at\":\"2018-06-03 12:25:34\",\"deleted_at\":null,\"description\":\"7at edoh 3la waste\"},\"grade\":null,\"gvsclass\":{\"gvs_classes_id\":1,\"name\":\"class_name_test\",\"grades_id\":4,\"created_at\":\"2018-06-10 08:52:47\",\"updated_at\":\"2018-06-10 08:52:47\",\"deleted_at\":null},\"requisteruser\":{\"id\":1,\"name\":\"amr\",\"email\":\"amr@soleeklab.com\",\"mobile\":\"01095594471\",\"user_type\":\"guardien\",\"created_at\":\"2018-05-09 13:04:33\",\"updated_at\":\"2018-06-13 19:24:24\"},\"reciveruser\":{\"id\":1,\"name\":\"amr\",\"email\":\"amr@soleeklab.com\",\"mobile\":\"01095594471\",\"user_type\":\"guardien\",\"created_at\":\"2018-05-09 13:04:33\",\"updated_at\":\"2018-06-13 19:24:24\"}},{\"ticket_id\":7,\"grades_id\":4,\"gvs_classes_id\":1,\"requister_user_id\":6,\"requister_type\":\"guardien\",\"requister_name\":\"GVS-admin\",\"reciver_user_id\":11,\"reciver_type\":\"teacher\",\"reciver_name\":\"GVS-adminxz\",\"priority_id\":1,\"status_id\":1,\"created_at\":\"2018-06-07 08:21:57\",\"updated_at\":\"2018-06-07 08:23:20\",\"deleted_at\":null,\"description\":\"Ebn elkalb drab el wad w 3doh men tezoo\",\"ticket\":{\"ticket_id\":7,\"grades_id\":4,\"gvs_classes_id\":1,\"requister_user_id\":6,\"requister_type\":\"guardien\",\"requister_name\":\"GVS-admin\",\"reciver_user_id\":11,\"reciver_type\":\"teacher\",\"reciver_name\":\"GVS-adminxz\",\"priority_id\":1,\"status_id\":1,\"created_at\":\"2018-06-07 08:21:57\",\"updated_at\":\"2018-06-07 08:23:20\",\"deleted_at\":null,\"description\":\"Ebn elkalb drab el wad w 3doh men tezoo\"},\"grade\":{\"grades_id\":4,\"name\":\"eslam\",\"order_id\":6,\"end_term_date\":\"2019-02-01\",\"created_at\":\"2018-05-15 12:29:59\",\"updated_at\":\"2018-06-07 02:43:26\",\"deleted_at\":null},\"gvsclass\":{\"gvs_classes_id\":1,\"name\":\"class_name_test\",\"grades_id\":4,\"created_at\":\"2018-06-10 08:52:47\",\"updated_at\":\"2018-06-10 08:52:47\",\"deleted_at\":null},\"requisteruser\":{\"id\":6,\"name\":\"GVS-admin\",\"email\":\"GVS@GVS.com1234512\",\"mobile\":\"\",\"user_type\":\"\",\"created_at\":\"2018-05-09 13:20:38\",\"updated_at\":\"2018-05-09 13:20:38\"},\"reciveruser\":{\"id\":11,\"name\":\"GVS-adminxz\",\"email\":\"qhdy\",\"mobile\":\"01095594471\",\"user_type\":\"teacher\",\"created_at\":\"2018-06-03 19:59:56\",\"updated_at\":\"2018-06-03 19:59:56\"}},{\"ticket_id\":9,\"grades_id\":3,\"gvs_classes_id\":1,\"requister_user_id\":6,\"requister_type\":\"guardien\",\"requister_name\":\"GVS-admin\",\"reciver_user_id\":11,\"reciver_type\":\"teacher\",\"reciver_name\":\"GVS-adminxz\",\"priority_id\":1,\"status_id\":1,\"created_at\":\"2018-06-07 08:23:35\",\"updated_at\":\"2018-06-07 08:23:35\",\"deleted_at\":null,\"description\":\"Ebn elkalb drab el wad w 3doh men tezoo\",\"ticket\":{\"ticket_id\":9,\"grades_id\":3,\"gvs_classes_id\":1,\"requister_user_id\":6,\"requister_type\":\"guardien\",\"requister_name\":\"GVS-admin\",\"reciver_user_id\":11,\"reciver_type\":\"teacher\",\"reciver_name\":\"GVS-adminxz\",\"priority_id\":1,\"status_id\":1,\"created_at\":\"2018-06-07 08:23:35\",\"updated_at\":\"2018-06-07 08:23:35\",\"deleted_at\":null,\"description\":\"Ebn elkalb drab el wad w 3doh men tezoo\"},\"grade\":{\"grades_id\":3,\"name\":\"eslam\",\"order_id\":4,\"end_term_date\":\"2018-05-25\",\"created_at\":\"2018-05-10 02:07:19\",\"updated_at\":\"2018-06-14 03:20:02\",\"deleted_at\":null},\"gvsclass\":{\"gvs_classes_id\":1,\"name\":\"class_name_test\",\"grades_id\":4,\"created_at\":\"2018-06-10 08:52:47\",\"updated_at\":\"2018-06-10 08:52:47\",\"deleted_at\":null},\"requisteruser\":{\"id\":6,\"name\":\"GVS-admin\",\"email\":\"GVS@GVS.com1234512\",\"mobile\":\"\",\"user_type\":\"\",\"created_at\":\"2018-05-09 13:20:38\",\"updated_at\":\"2018-05-09 13:20:38\"},\"reciveruser\":{\"id\":11,\"name\":\"GVS-adminxz\",\"email\":\"qhdy\",\"mobile\":\"01095594471\",\"user_type\":\"teacher\",\"created_at\":\"2018-06-03 19:59:56\",\"updated_at\":\"2018-06-03 19:59:56\"}},{\"ticket_id\":11,\"grades_id\":3,\"gvs_classes_id\":1,\"requister_user_id\":6,\"requister_type\":\"guardien\",\"requister_name\":\"GVS-admin\",\"reciver_user_id\":11,\"reciver_type\":\"teacher\",\"reciver_name\":\"GVS-adminxz\",\"priority_id\":1,\"status_id\":1,\"created_at\":\"2018-06-24 07:29:10\",\"updated_at\":\"2018-06-24 07:29:10\",\"deleted_at\":null,\"description\":\"Ebn elkalb drab el wad w 3doh men tezoo\",\"ticket\":{\"ticket_id\":11,\"grades_id\":3,\"gvs_classes_id\":1,\"requister_user_id\":6,\"requister_type\":\"guardien\",\"requister_name\":\"GVS-admin\",\"reciver_user_id\":11,\"reciver_type\":\"teacher\",\"reciver_name\":\"GVS-adminxz\",\"priority_id\":1,\"status_id\":1,\"created_at\":\"2018-06-24 07:29:10\",\"updated_at\":\"2018-06-24 07:29:10\",\"deleted_at\":null,\"description\":\"Ebn elkalb drab el wad w 3doh men tezoo\"},\"grade\":{\"grades_id\":3,\"name\":\"eslam\",\"order_id\":4,\"end_term_date\":\"2018-05-25\",\"created_at\":\"2018-05-10 02:07:19\",\"updated_at\":\"2018-06-14 03:20:02\",\"deleted_at\":null},\"gvsclass\":{\"gvs_classes_id\":1,\"name\":\"class_name_test\",\"grades_id\":4,\"created_at\":\"2018-06-10 08:52:47\",\"updated_at\":\"2018-06-10 08:52:47\",\"deleted_at\":null},\"requisteruser\":{\"id\":6,\"name\":\"GVS-admin\",\"email\":\"GVS@GVS.com1234512\",\"mobile\":\"\",\"user_type\":\"\",\"created_at\":\"2018-05-09 13:20:38\",\"updated_at\":\"2018-05-09 13:20:38\"},\"reciveruser\":{\"id\":11,\"name\":\"GVS-adminxz\",\"email\":\"qhdy\",\"mobile\":\"01095594471\",\"user_type\":\"teacher\",\"created_at\":\"2018-06-03 19:59:56\",\"updated_at\":\"2018-06-03 19:59:56\"}},{\"ticket_id\":12,\"grades_id\":3,\"gvs_classes_id\":1,\"requister_user_id\":6,\"requister_type\":\"guardien\",\"requister_name\":\"GVS-admin\",\"reciver_user_id\":11,\"reciver_type\":\"teacher\",\"reciver_name\":\"GVS-adminxz\",\"priority_id\":1,\"status_id\":1,\"created_at\":\"2018-06-24 07:30:17\",\"updated_at\":\"2018-06-24 07:30:17\",\"deleted_at\":null,\"description\":\"Ebn elkalb drab el wad w 3doh men tezoo\",\"ticket\":{\"ticket_id\":12,\"grades_id\":3,\"gvs_classes_id\":1,\"requister_user_id\":6,\"requister_type\":\"guardien\",\"requister_name\":\"GVS-admin\",\"reciver_user_id\":11,\"reciver_type\":\"teacher\",\"reciver_name\":\"GVS-adminxz\",\"priority_id\":1,\"status_id\":1,\"created_at\":\"2018-06-24 07:30:17\",\"updated_at\":\"2018-06-24 07:30:17\",\"deleted_at\":null,\"description\":\"Ebn elkalb drab el wad w 3doh men tezoo\"},\"grade\":{\"grades_id\":3,\"name\":\"eslam\",\"order_id\":4,\"end_term_date\":\"2018-05-25\",\"created_at\":\"2018-05-10 02:07:19\",\"updated_at\":\"2018-06-14 03:20:02\",\"deleted_at\":null},\"gvsclass\":{\"gvs_classes_id\":1,\"name\":\"class_name_test\",\"grades_id\":4,\"created_at\":\"2018-06-10 08:52:47\",\"updated_at\":\"2018-06-10 08:52:47\",\"deleted_at\":null},\"requisteruser\":{\"id\":6,\"name\":\"GVS-admin\",\"email\":\"GVS@GVS.com1234512\",\"mobile\":\"\",\"user_type\":\"\",\"created_at\":\"2018-05-09 13:20:38\",\"updated_at\":\"2018-05-09 13:20:38\"},\"reciveruser\":{\"id\":11,\"name\":\"GVS-adminxz\",\"email\":\"qhdy\",\"mobile\":\"01095594471\",\"user_type\":\"teacher\",\"created_at\":\"2018-06-03 19:59:56\",\"updated_at\":\"2018-06-03 19:59:56\"}},{\"ticket_id\":13,\"grades_id\":3,\"gvs_classes_id\":1,\"requister_user_id\":6,\"requister_type\":\"guardien\",\"requister_name\":\"GVS-admin\",\"reciver_user_id\":11,\"reciver_type\":\"teacher\",\"reciver_name\":\"GVS-adminxz\",\"priority_id\":1,\"status_id\":1,\"created_at\":\"2018-06-24 07:30:19\",\"updated_at\":\"2018-06-24 07:30:19\",\"deleted_at\":null,\"description\":\"Ebn elkalb drab el wad w 3doh men tezoo\",\"ticket\":{\"ticket_id\":13,\"grades_id\":3,\"gvs_classes_id\":1,\"requister_user_id\":6,\"requister_type\":\"guardien\",\"requister_name\":\"GVS-admin\",\"reciver_user_id\":11,\"reciver_type\":\"teacher\",\"reciver_name\":\"GVS-adminxz\",\"priority_id\":1,\"status_id\":1,\"created_at\":\"2018-06-24 07:30:19\",\"updated_at\":\"2018-06-24 07:30:19\",\"deleted_at\":null,\"description\":\"Ebn elkalb drab el wad w 3doh men tezoo\"},\"grade\":{\"grades_id\":3,\"name\":\"eslam\",\"order_id\":4,\"end_term_date\":\"2018-05-25\",\"created_at\":\"2018-05-10 02:07:19\",\"updated_at\":\"2018-06-14 03:20:02\",\"deleted_at\":null},\"gvsclass\":{\"gvs_classes_id\":1,\"name\":\"class_name_test\",\"grades_id\":4,\"created_at\":\"2018-06-10 08:52:47\",\"updated_at\":\"2018-06-10 08:52:47\",\"deleted_at\":null},\"requisteruser\":{\"id\":6,\"name\":\"GVS-admin\",\"email\":\"GVS@GVS.com1234512\",\"mobile\":\"\",\"user_type\":\"\",\"created_at\":\"2018-05-09 13:20:38\",\"updated_at\":\"2018-05-09 13:20:38\"},\"reciveruser\":{\"id\":11,\"name\":\"GVS-adminxz\",\"email\":\"qhdy\",\"mobile\":\"01095594471\",\"user_type\":\"teacher\",\"created_at\":\"2018-06-03 19:59:56\",\"updated_at\":\"2018-06-03 19:59:56\"}},{\"ticket_id\":14,\"grades_id\":3,\"gvs_classes_id\":1,\"requister_user_id\":6,\"requister_type\":\"guardien\",\"requister_name\":\"GVS-admin\",\"reciver_user_id\":11,\"reciver_type\":\"teacher\",\"reciver_name\":\"GVS-adminxz\",\"priority_id\":1,\"status_id\":1,\"created_at\":\"2018-06-24 07:30:21\",\"updated_at\":\"2018-06-24 07:30:21\",\"deleted_at\":null,\"description\":\"Ebn elkalb drab el wad w 3doh men tezoo\",\"ticket\":{\"ticket_id\":14,\"grades_id\":3,\"gvs_classes_id\":1,\"requister_user_id\":6,\"requister_type\":\"guardien\",\"requister_name\":\"GVS-admin\",\"reciver_user_id\":11,\"reciver_type\":\"teacher\",\"reciver_name\":\"GVS-adminxz\",\"priority_id\":1,\"status_id\":1,\"created_at\":\"2018-06-24 07:30:21\",\"updated_at\":\"2018-06-24 07:30:21\",\"deleted_at\":null,\"description\":\"Ebn elkalb drab el wad w 3doh men tezoo\"},\"grade\":{\"grades_id\":3,\"name\":\"eslam\",\"order_id\":4,\"end_term_date\":\"2018-05-25\",\"created_at\":\"2018-05-10 02:07:19\",\"updated_at\":\"2018-06-14 03:20:02\",\"deleted_at\":null},\"gvsclass\":{\"gvs_classes_id\":1,\"name\":\"class_name_test\",\"grades_id\":4,\"created_at\":\"2018-06-10 08:52:47\",\"updated_at\":\"2018-06-10 08:52:47\",\"deleted_at\":null},\"requisteruser\":{\"id\":6,\"name\":\"GVS-admin\",\"email\":\"GVS@GVS.com1234512\",\"mobile\":\"\",\"user_type\":\"\",\"created_at\":\"2018-05-09 13:20:38\",\"updated_at\":\"2018-05-09 13:20:38\"},\"reciveruser\":{\"id\":11,\"name\":\"GVS-adminxz\",\"email\":\"qhdy\",\"mobile\":\"01095594471\",\"user_type\":\"teacher\",\"created_at\":\"2018-06-03 19:59:56\",\"updated_at\":\"2018-06-03 19:59:56\"}},{\"ticket_id\":15,\"grades_id\":3,\"gvs_classes_id\":1,\"requister_user_id\":6,\"requister_type\":\"guardien\",\"requister_name\":\"GVS-admin\",\"reciver_user_id\":11,\"reciver_type\":\"teacher\",\"reciver_name\":\"GVS-adminxz\",\"priority_id\":1,\"status_id\":1,\"created_at\":\"2018-06-24 07:30:24\",\"updated_at\":\"2018-06-24 07:30:24\",\"deleted_at\":null,\"description\":\"Ebn elkalb drab el wad w 3doh men tezoo\",\"ticket\":{\"ticket_id\":15,\"grades_id\":3,\"gvs_classes_id\":1,\"requister_user_id\":6,\"requister_type\":\"guardien\",\"requister_name\":\"GVS-admin\",\"reciver_user_id\":11,\"reciver_type\":\"teacher\",\"reciver_name\":\"GVS-adminxz\",\"priority_id\":1,\"status_id\":1,\"created_at\":\"2018-06-24 07:30:24\",\"updated_at\":\"2018-06-24 07:30:24\",\"deleted_at\":null,\"description\":\"Ebn elkalb drab el wad w 3doh men tezoo\"},\"grade\":{\"grades_id\":3,\"name\":\"eslam\",\"order_id\":4,\"end_term_date\":\"2018-05-25\",\"created_at\":\"2018-05-10 02:07:19\",\"updated_at\":\"2018-06-14 03:20:02\",\"deleted_at\":null},\"gvsclass\":{\"gvs_classes_id\":1,\"name\":\"class_name_test\",\"grades_id\":4,\"created_at\":\"2018-06-10 08:52:47\",\"updated_at\":\"2018-06-10 08:52:47\",\"deleted_at\":null},\"requisteruser\":{\"id\":6,\"name\":\"GVS-admin\",\"email\":\"GVS@GVS.com1234512\",\"mobile\":\"\",\"user_type\":\"\",\"created_at\":\"2018-05-09 13:20:38\",\"updated_at\":\"2018-05-09 13:20:38\"},\"reciveruser\":{\"id\":11,\"name\":\"GVS-adminxz\",\"email\":\"qhdy\",\"mobile\":\"01095594471\",\"user_type\":\"teacher\",\"created_at\":\"2018-06-03 19:59:56\",\"updated_at\":\"2018-06-03 19:59:56\"}},{\"ticket_id\":16,\"grades_id\":3,\"gvs_classes_id\":1,\"requister_user_id\":6,\"requister_type\":\"guardien\",\"requister_name\":\"GVS-admin\",\"reciver_user_id\":11,\"reciver_type\":\"teacher\",\"reciver_name\":\"GVS-adminxz\",\"priority_id\":1,\"status_id\":1,\"created_at\":\"2018-06-24 07:30:27\",\"updated_at\":\"2018-06-24 07:30:27\",\"deleted_at\":null,\"description\":\"Ebn elkalb drab el wad w 3doh men tezoo\",\"ticket\":{\"ticket_id\":16,\"grades_id\":3,\"gvs_classes_id\":1,\"requister_user_id\":6,\"requister_type\":\"guardien\",\"requister_name\":\"GVS-admin\",\"reciver_user_id\":11,\"reciver_type\":\"teacher\",\"reciver_name\":\"GVS-adminxz\",\"priority_id\":1,\"status_id\":1,\"created_at\":\"2018-06-24 07:30:27\",\"updated_at\":\"2018-06-24 07:30:27\",\"deleted_at\":null,\"description\":\"Ebn elkalb drab el wad w 3doh men tezoo\"},\"grade\":{\"grades_id\":3,\"name\":\"eslam\",\"order_id\":4,\"end_term_date\":\"2018-05-25\",\"created_at\":\"2018-05-10 02:07:19\",\"updated_at\":\"2018-06-14 03:20:02\",\"deleted_at\":null},\"gvsclass\":{\"gvs_classes_id\":1,\"name\":\"class_name_test\",\"grades_id\":4,\"created_at\":\"2018-06-10 08:52:47\",\"updated_at\":\"2018-06-10 08:52:47\",\"deleted_at\":null},\"requisteruser\":{\"id\":6,\"name\":\"GVS-admin\",\"email\":\"GVS@GVS.com1234512\",\"mobile\":\"\",\"user_type\":\"\",\"created_at\":\"2018-05-09 13:20:38\",\"updated_at\":\"2018-05-09 13:20:38\"},\"reciveruser\":{\"id\":11,\"name\":\"GVS-adminxz\",\"email\":\"qhdy\",\"mobile\":\"01095594471\",\"user_type\":\"teacher\",\"created_at\":\"2018-06-03 19:59:56\",\"updated_at\":\"2018-06-03 19:59:56\"}},{\"ticket_id\":17,\"grades_id\":3,\"gvs_classes_id\":1,\"requister_user_id\":6,\"requister_type\":\"guardien\",\"requister_name\":\"GVS-admin\",\"reciver_user_id\":11,\"reciver_type\":\"teacher\",\"reciver_name\":\"GVS-adminxz\",\"priority_id\":1,\"status_id\":1,\"created_at\":\"2018-06-24 07:30:29\",\"updated_at\":\"2018-06-24 07:30:29\",\"deleted_at\":null,\"description\":\"Ebn elkalb drab el wad w 3doh men tezoo\",\"ticket\":{\"ticket_id\":17,\"grades_id\":3,\"gvs_classes_id\":1,\"requister_user_id\":6,\"requister_type\":\"guardien\",\"requister_name\":\"GVS-admin\",\"reciver_user_id\":11,\"reciver_type\":\"teacher\",\"reciver_name\":\"GVS-adminxz\",\"priority_id\":1,\"status_id\":1,\"created_at\":\"2018-06-24 07:30:29\",\"updated_at\":\"2018-06-24 07:30:29\",\"deleted_at\":null,\"description\":\"Ebn elkalb drab el wad w 3doh men tezoo\"},\"grade\":{\"grades_id\":3,\"name\":\"eslam\",\"order_id\":4,\"end_term_date\":\"2018-05-25\",\"created_at\":\"2018-05-10 02:07:19\",\"updated_at\":\"2018-06-14 03:20:02\",\"deleted_at\":null},\"gvsclass\":{\"gvs_classes_id\":1,\"name\":\"class_name_test\",\"grades_id\":4,\"created_at\":\"2018-06-10 08:52:47\",\"updated_at\":\"2018-06-10 08:52:47\",\"deleted_at\":null},\"requisteruser\":{\"id\":6,\"name\":\"GVS-admin\",\"email\":\"GVS@GVS.com1234512\",\"mobile\":\"\",\"user_type\":\"\",\"created_at\":\"2018-05-09 13:20:38\",\"updated_at\":\"2018-05-09 13:20:38\"},\"reciveruser\":{\"id\":11,\"name\":\"GVS-adminxz\",\"email\":\"qhdy\",\"mobile\":\"01095594471\",\"user_type\":\"teacher\",\"created_at\":\"2018-06-03 19:59:56\",\"updated_at\":\"2018-06-03 19:59:56\"}},{\"ticket_id\":18,\"grades_id\":3,\"gvs_classes_id\":1,\"requister_user_id\":6,\"requister_type\":\"guardien\",\"requister_name\":\"GVS-admin\",\"reciver_user_id\":11,\"reciver_type\":\"teacher\",\"reciver_name\":\"GVS-adminxz\",\"priority_id\":1,\"status_id\":1,\"created_at\":\"2018-06-24 07:30:30\",\"updated_at\":\"2018-06-24 07:30:30\",\"deleted_at\":null,\"description\":\"Ebn elkalb drab el wad w 3doh men tezoo\",\"ticket\":{\"ticket_id\":18,\"grades_id\":3,\"gvs_classes_id\":1,\"requister_user_id\":6,\"requister_type\":\"guardien\",\"requister_name\":\"GVS-admin\",\"reciver_user_id\":11,\"reciver_type\":\"teacher\",\"reciver_name\":\"GVS-adminxz\",\"priority_id\":1,\"status_id\":1,\"created_at\":\"2018-06-24 07:30:30\",\"updated_at\":\"2018-06-24 07:30:30\",\"deleted_at\":null,\"description\":\"Ebn elkalb drab el wad w 3doh men tezoo\"},\"grade\":{\"grades_id\":3,\"name\":\"eslam\",\"order_id\":4,\"end_term_date\":\"2018-05-25\",\"created_at\":\"2018-05-10 02:07:19\",\"updated_at\":\"2018-06-14 03:20:02\",\"deleted_at\":null},\"gvsclass\":{\"gvs_classes_id\":1,\"name\":\"class_name_test\",\"grades_id\":4,\"created_at\":\"2018-06-10 08:52:47\",\"updated_at\":\"2018-06-10 08:52:47\",\"deleted_at\":null},\"requisteruser\":{\"id\":6,\"name\":\"GVS-admin\",\"email\":\"GVS@GVS.com1234512\",\"mobile\":\"\",\"user_type\":\"\",\"created_at\":\"2018-05-09 13:20:38\",\"updated_at\":\"2018-05-09 13:20:38\"},\"reciveruser\":{\"id\":11,\"name\":\"GVS-adminxz\",\"email\":\"qhdy\",\"mobile\":\"01095594471\",\"user_type\":\"teacher\",\"created_at\":\"2018-06-03 19:59:56\",\"updated_at\":\"2018-06-03 19:59:56\"}},{\"ticket_id\":19,\"grades_id\":3,\"gvs_classes_id\":1,\"requister_user_id\":6,\"requister_type\":\"guardien\",\"requister_name\":\"GVS-admin\",\"reciver_user_id\":11,\"reciver_type\":\"teacher\",\"reciver_name\":\"GVS-adminxz\",\"priority_id\":1,\"status_id\":1,\"created_at\":\"2018-06-24 07:30:32\",\"updated_at\":\"2018-06-24 07:30:32\",\"deleted_at\":null,\"description\":\"Ebn elkalb drab el wad w 3doh men tezoo\",\"ticket\":{\"ticket_id\":19,\"grades_id\":3,\"gvs_classes_id\":1,\"requister_user_id\":6,\"requister_type\":\"guardien\",\"requister_name\":\"GVS-admin\",\"reciver_user_id\":11,\"reciver_type\":\"teacher\",\"reciver_name\":\"GVS-adminxz\",\"priority_id\":1,\"status_id\":1,\"created_at\":\"2018-06-24 07:30:32\",\"updated_at\":\"2018-06-24 07:30:32\",\"deleted_at\":null,\"description\":\"Ebn elkalb drab el wad w 3doh men tezoo\"},\"grade\":{\"grades_id\":3,\"name\":\"eslam\",\"order_id\":4,\"end_term_date\":\"2018-05-25\",\"created_at\":\"2018-05-10 02:07:19\",\"updated_at\":\"2018-06-14 03:20:02\",\"deleted_at\":null},\"gvsclass\":{\"gvs_classes_id\":1,\"name\":\"class_name_test\",\"grades_id\":4,\"created_at\":\"2018-06-10 08:52:47\",\"updated_at\":\"2018-06-10 08:52:47\",\"deleted_at\":null},\"requisteruser\":{\"id\":6,\"name\":\"GVS-admin\",\"email\":\"GVS@GVS.com1234512\",\"mobile\":\"\",\"user_type\":\"\",\"created_at\":\"2018-05-09 13:20:38\",\"updated_at\":\"2018-05-09 13:20:38\"},\"reciveruser\":{\"id\":11,\"name\":\"GVS-adminxz\",\"email\":\"qhdy\",\"mobile\":\"01095594471\",\"user_type\":\"teacher\",\"created_at\":\"2018-06-03 19:59:56\",\"updated_at\":\"2018-06-03 19:59:56\"}},{\"ticket_id\":20,\"grades_id\":3,\"gvs_classes_id\":1,\"requister_user_id\":6,\"requister_type\":\"guardien\",\"requister_name\":\"GVS-admin\",\"reciver_user_id\":11,\"reciver_type\":\"teacher\",\"reciver_name\":\"GVS-adminxz\",\"priority_id\":1,\"status_id\":1,\"created_at\":\"2018-06-24 07:30:35\",\"updated_at\":\"2018-06-24 07:30:35\",\"deleted_at\":null,\"description\":\"Ebn elkalb drab el wad w 3doh men tezoo\",\"ticket\":{\"ticket_id\":20,\"grades_id\":3,\"gvs_classes_id\":1,\"requister_user_id\":6,\"requister_type\":\"guardien\",\"requister_name\":\"GVS-admin\",\"reciver_user_id\":11,\"reciver_type\":\"teacher\",\"reciver_name\":\"GVS-adminxz\",\"priority_id\":1,\"status_id\":1,\"created_at\":\"2018-06-24 07:30:35\",\"updated_at\":\"2018-06-24 07:30:35\",\"deleted_at\":null,\"description\":\"Ebn elkalb drab el wad w 3doh men tezoo\"},\"grade\":{\"grades_id\":3,\"name\":\"eslam\",\"order_id\":4,\"end_term_date\":\"2018-05-25\",\"created_at\":\"2018-05-10 02:07:19\",\"updated_at\":\"2018-06-14 03:20:02\",\"deleted_at\":null},\"gvsclass\":{\"gvs_classes_id\":1,\"name\":\"class_name_test\",\"grades_id\":4,\"created_at\":\"2018-06-10 08:52:47\",\"updated_at\":\"2018-06-10 08:52:47\",\"deleted_at\":null},\"requisteruser\":{\"id\":6,\"name\":\"GVS-admin\",\"email\":\"GVS@GVS.com1234512\",\"mobile\":\"\",\"user_type\":\"\",\"created_at\":\"2018-05-09 13:20:38\",\"updated_at\":\"2018-05-09 13:20:38\"},\"reciveruser\":{\"id\":11,\"name\":\"GVS-adminxz\",\"email\":\"qhdy\",\"mobile\":\"01095594471\",\"user_type\":\"teacher\",\"created_at\":\"2018-06-03 19:59:56\",\"updated_at\":\"2018-06-03 19:59:56\"}},{\"ticket_id\":21,\"grades_id\":3,\"gvs_classes_id\":1,\"requister_user_id\":6,\"requister_type\":\"guardien\",\"requister_name\":\"GVS-admin\",\"reciver_user_id\":11,\"reciver_type\":\"teacher\",\"reciver_name\":\"GVS-adminxz\",\"priority_id\":1,\"status_id\":1,\"created_at\":\"2018-06-24 07:31:11\",\"updated_at\":\"2018-06-24 07:31:11\",\"deleted_at\":null,\"description\":\"Ebn elkalb drab el wad w 3doh men tezoo\",\"ticket\":{\"ticket_id\":21,\"grades_id\":3,\"gvs_classes_id\":1,\"requister_user_id\":6,\"requister_type\":\"guardien\",\"requister_name\":\"GVS-admin\",\"reciver_user_id\":11,\"reciver_type\":\"teacher\",\"reciver_name\":\"GVS-adminxz\",\"priority_id\":1,\"status_id\":1,\"created_at\":\"2018-06-24 07:31:11\",\"updated_at\":\"2018-06-24 07:31:11\",\"deleted_at\":null,\"description\":\"Ebn elkalb drab el wad w 3doh men tezoo\"},\"grade\":{\"grades_id\":3,\"name\":\"eslam\",\"order_id\":4,\"end_term_date\":\"2018-05-25\",\"created_at\":\"2018-05-10 02:07:19\",\"updated_at\":\"2018-06-14 03:20:02\",\"deleted_at\":null},\"gvsclass\":{\"gvs_classes_id\":1,\"name\":\"class_name_test\",\"grades_id\":4,\"created_at\":\"2018-06-10 08:52:47\",\"updated_at\":\"2018-06-10 08:52:47\",\"deleted_at\":null},\"requisteruser\":{\"id\":6,\"name\":\"GVS-admin\",\"email\":\"GVS@GVS.com1234512\",\"mobile\":\"\",\"user_type\":\"\",\"created_at\":\"2018-05-09 13:20:38\",\"updated_at\":\"2018-05-09 13:20:38\"},\"reciveruser\":{\"id\":11,\"name\":\"GVS-adminxz\",\"email\":\"qhdy\",\"mobile\":\"01095594471\",\"user_type\":\"teacher\",\"created_at\":\"2018-06-03 19:59:56\",\"updated_at\":\"2018-06-03 19:59:56\"}}],\"first_page_url\":\"http:\\/\\/localhost\\/GVS\\/public\\/api\\/tickets?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\/\\/localhost\\/GVS\\/public\\/api\\/tickets?page=1\",\"next_page_url\":null,\"path\":\"http:\\/\\/localhost\\/GVS\\/public\\/api\\/tickets\",\"per_page\":25,\"prev_page_url\":null,\"to\":19,\"total\":19}}"
+						}
+					]
+				},
+				{
+					"name": "Register as admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "wintop-admin",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "po23mn!@",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "c_password",
+									"value": "po23mn!@",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "eng.iessa.mostafa@gmail.com",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "winnerten.com/wini/public/api/api/register",
+							"host": [
+								"winnerten.com/wini/public/api/api"
+							],
+							"path": [
+								"register"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mobile API",
+			"description": "",
+			"item": [
+				{
+					"name": "Log in by email",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "eng.iessa.mostafa@gmail.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "po23mn!@",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "winnerten.com/wini/public/api/login",
+							"host": [
+								"winnerten.com/wini/public/api/login"
+							]
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "b4bdc384-014f-490a-a52c-a6afd818f0ae",
+							"name": "Error Log in by email ",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"disabled": false
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "eng.iessa.mostafa@gmail.com",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "po23mn!@1",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "winnerten.com/wini/public/api/api/login",
+									"host": [
+										"winnerten.com/wini/public/api/api"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "47",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Jul 2018 07:42:58 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100",
+									"name": "Keep-Alive",
+									"description": "Custom header"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.28 (Unix) OpenSSL/1.0.2l PHP/7.1.10 mod_perl/2.0.8-dev Perl/v5.16.3",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.1.10",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60",
+									"name": "X-RateLimit-Limit",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57",
+									"name": "X-RateLimit-Remaining",
+									"description": "Custom header"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Fri Jul 27 2018 11:42:22 GMT+0200 (EET)",
+									"httpOnly": true,
+									"domain": "localhost",
+									"path": "/",
+									"secure": false,
+									"value": "eyJpdiI6ImRHb3ZqMldTQ0pjUVwvVzlEYzQyYlJnPT0iLCJ2YWx1ZSI6InJ6THdudFluWTFld3owY2JQcFdEVzhiV2xUWk9sRXJmUTZKTkVMeEhYVDJzSWhEVSt6Z0c4anVoZVwvWm8xN2d5OHlab3QxbmpxQUo2MTVidFpxNzcrdz09IiwibWFjIjoiNWM5YjYxZjk5Yjg5MmM4YTAwMGRlYjFlMjY5MGEwNTM1YjE3OWJkYmUzNWMzNmYxOGFkMTgzNWZlMmRkN2ExMCJ9",
+									"key": "laravel_session"
+								}
+							],
+							"responseTime": 311,
+							"body": "{\"status\":\"error\",\"data\":\"Unauthorized Access\"}"
+						},
+						{
+							"id": "81e22197-393c-48e5-a5df-c0d580539a41",
+							"name": "Log in by email",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "eng.iessa.mostafa@gmail.com",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "po23mn!@",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "winnerten.com/wini/public/api/login",
+									"host": [
+										"winnerten.com/wini/public/api/login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1340",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Jul 2018 07:24:41 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100",
+									"name": "Keep-Alive",
+									"description": "Custom header"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.28 (Unix) OpenSSL/1.0.2l PHP/7.1.10 mod_perl/2.0.8-dev Perl/v5.16.3",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.1.10",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60",
+									"name": "X-RateLimit-Limit",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58",
+									"name": "X-RateLimit-Remaining",
+									"description": "Custom header"
+								}
+							],
+							"cookie": [],
+							"responseTime": 403,
+							"body": "{\"UserDetails\":{\"id\":1,\"name\":\"wintop-admin\",\"email\":\"eng.iessa.mostafa@gmail.com\",\"mobile\":\"\",\"country\":null,\"lang\":\"ar\",\"c_question\":0,\"c_level\":0,\"score\":4,\"created_at\":\"2018-07-24 10:44:20\",\"updated_at\":\"2018-07-28 11:28:14\"},\"status\":\"success\",\"data\":{\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjdlNGJhMjUyNjEyOTJlYzRiMDcwOGRhZWYyMDg0NDUwZjQ2OTYzOTdmZWRiYTMxMWVlMjg4NmM5ODE5NzQ1ZDVjYTg5YzBmN2YwYTZiNjY4In0.eyJhdWQiOiIxIiwianRpIjoiN2U0YmEyNTI2MTI5MmVjNGIwNzA4ZGFlZjIwODQ0NTBmNDY5NjM5N2ZlZGJhMzExZWUyODg2Yzk4MTk3NDVkNWNhODljMGY3ZjBhNmI2NjgiLCJpYXQiOjE1MzI5MzU0ODIsIm5iZiI6MTUzMjkzNTQ4MiwiZXhwIjoxNTY0NDcxNDgxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.DrhZvWlL-z2MRipJkYmnybifqKISSza0ZsLOkX-zE-m6xhP6VuTyX8UQtEjcYakgDeyEYves8YLBQmA-p1dRPmYEzlkrKowqkNjkIz5QZb1UKVyhcyFJ68DT3TrGeKikE0yUt9BS1HXf-K-J6YI428S36IFgNR7FM7uKjEVd4-BJnE29xC-ExH2Fnn_epMHLfRx5rQjc2SbWSpEQurxiFa78Z-BhWWHXIUaukibA6u4oFTcPL_JZaPpcOs1Heq17bUl4UMnahRfKSR5VuvuQRjfzD1xW3diq7EcuuMbGpJHsVgVS5UPs5FVUMnAYXJxPEL_lTjv1uZGgI6hE9ihM_eipEJ05aUzWpoMwMwxvr753Y-JdTJt0K3aIfP-hIrctK9efPiXHP07KVNu4Kl2xrFNWEq35Kzj1VcLj8Ah2qtqt00i7-Ob9ZQ5MXV8XElNkm1NiNImvLGifcTeA-crYmQNKGl4jBYAI9ROIgvoUEuxCruXI17QXESUzihTsihexG-kUKNBMbJPpVn7SPU87fxmXMud98UDNxX_53bsZHXuhp0p2Y9Veyvi_-UPi9kJ0M9Rt0ZB7p0NbSnAvkxhVGCnOHn7p63LtKuq2tTM3W4DDhhtkC4Wzl5wCi6g6-4N7WeDhdyIz9QXUcFwD-Pb5K9PGS22Fa_CFshgdJF946G0\"}}"
+						}
+					]
+				},
+				{
+					"name": "Log in by Mobile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mobile",
+									"value": "07302018120",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "po23mn!@",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "winnerten.com/wini/public/api/login-by-mobile",
+							"host": [
+								"winnerten.com/wini/public/api/login-by-mobile"
+							]
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "ef0d7010-3c9d-4005-94da-d73219ebbadb",
+							"name": "Error Log in by Mobile",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"disabled": false
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "mobile",
+											"value": "27072018123",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "po23mn!@1",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "winnerten.com/wini/public/api/api/login-by-mobile",
+									"host": [
+										"winnerten.com/wini/public/api/api"
+									],
+									"path": [
+										"login-by-mobile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "47",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Jul 2018 07:45:16 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100",
+									"name": "Keep-Alive",
+									"description": "Custom header"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.28 (Unix) OpenSSL/1.0.2l PHP/7.1.10 mod_perl/2.0.8-dev Perl/v5.16.3",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.1.10",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60",
+									"name": "X-RateLimit-Limit",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58",
+									"name": "X-RateLimit-Remaining",
+									"description": "Custom header"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Fri Jul 27 2018 11:42:22 GMT+0200 (EET)",
+									"httpOnly": true,
+									"domain": "localhost",
+									"path": "/",
+									"secure": false,
+									"value": "eyJpdiI6ImRHb3ZqMldTQ0pjUVwvVzlEYzQyYlJnPT0iLCJ2YWx1ZSI6InJ6THdudFluWTFld3owY2JQcFdEVzhiV2xUWk9sRXJmUTZKTkVMeEhYVDJzSWhEVSt6Z0c4anVoZVwvWm8xN2d5OHlab3QxbmpxQUo2MTVidFpxNzcrdz09IiwibWFjIjoiNWM5YjYxZjk5Yjg5MmM4YTAwMGRlYjFlMjY5MGEwNTM1YjE3OWJkYmUzNWMzNmYxOGFkMTgzNWZlMmRkN2ExMCJ9",
+									"key": "laravel_session"
+								}
+							],
+							"responseTime": 312,
+							"body": "{\"status\":\"error\",\"data\":\"Unauthorized Access\"}"
+						},
+						{
+							"id": "b2874e3e-c685-48a4-ade6-078d5ad5eb1c",
+							"name": "Log in by Mobile",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"disabled": false
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "mobile",
+											"value": "27072018123",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "po23mn!@",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "winnerten.com/wini/public/api/login-by-mobile",
+									"host": [
+										"winnerten.com/wini/public/api/login-by-mobile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1362",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Jul 2018 07:24:02 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100",
+									"name": "Keep-Alive",
+									"description": "Custom header"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.28 (Unix) OpenSSL/1.0.2l PHP/7.1.10 mod_perl/2.0.8-dev Perl/v5.16.3",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.1.10",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60",
+									"name": "X-RateLimit-Limit",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59",
+									"name": "X-RateLimit-Remaining",
+									"description": "Custom header"
+								}
+							],
+							"cookie": [],
+							"responseTime": 461,
+							"body": "{\"UserDetails\":{\"id\":5,\"name\":\"wintop-admin\",\"email\":\"eng.iessa.mostafa27072018231@gmail.com\",\"mobile\":\"27072018123\",\"country\":null,\"lang\":\"ar\",\"c_question\":0,\"c_level\":0,\"score\":0,\"created_at\":\"2018-07-27 07:39:32\",\"updated_at\":\"2018-07-27 07:39:32\"},\"status\":\"success\",\"data\":{\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImI3Yzg0YjQyNTYwMWIyMWJiNGQxYjA3NzBjODQ2YzUzNWQ5N2UzOTJiNDcyMTcyZWVmNzQ5ZjFiNWZlMmNlY2U0YmExZjc2ZDg1YTMwODdkIn0.eyJhdWQiOiIxIiwianRpIjoiYjdjODRiNDI1NjAxYjIxYmI0ZDFiMDc3MGM4NDZjNTM1ZDk3ZTM5MmI0NzIxNzJlZWY3NDlmMWI1ZmUyY2VjZTRiYTFmNzZkODVhMzA4N2QiLCJpYXQiOjE1MzI5MzU0NDIsIm5iZiI6MTUzMjkzNTQ0MiwiZXhwIjoxNTY0NDcxNDQyLCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.GlwzBEGg85xON_iChgX2kYRwI6wN6xvLekk_eXdDwzG5iVx3JlrZyULWAWBk5dFFeqQQwypRz0XtoR6yK3vGYLNx9et2DJCpCgZC5xWF5S5J7sBva3APxkhZuN7fc3_jmQeQ-WqvY2jSTMNerhY6st4ifoqyg1URlXZFyvoJh_dnujxb6-vV_gALaD_uB1kUGGG1ZLtw9mnN-TldLIHoxaEWTmcIwg9uJhBP9myoyDng3c9QqTL2Tu7K1JZmCqoH6wmaT2YPw7UU53m-sNz2WIlISRqNw9JPy9wN6b7VuTFKTQ0h_LeJ8_tWo8eeQXD9vbe1IgInQ94vZfJu7qg1679eimpUUd-Q1Vwd9dz_1GZ0lS3ju0uSdeAFjuBzVRvpn1Y-rIh9o9n5gJrDUJDxePMEegcobDn6WF43c5OXIEyRwlvWBaZIv9m94rEHbzyVVvLZDqk4F_nE95eSvQUpmuzDA9_jhbgEezi9SRnj0bp9VjSaAzNYUKT5PxnD0jccmyAwxNgxaI5Ch_Y3xiCHw84OISqgHN9v91ts7cn69tfoJqLjWPQYKajbaIA8aIH1g45eOOLGNFhSJtQ7rX1_T1_Rb_gEfiGIUFlziOevBGrSryvHkbDh7rYEvjkDxCKMkm4HpJJvkGgnFZLbrVTBh37tB0R-vtoOPC7152SMI-w\"}}"
+						}
+					]
+				},
+				{
+					"name": "get question",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNlMDU4OGM4MmJiYjMwOGFjNTk1NWY3ZWVhMDI3ODVlYmM0NzkyZjFjY2ZmN2JjNzdkYmE3YjJmYjM5YjNiMThlMTY2NjgxZTQ0NTBmMWY4In0.eyJhdWQiOiIxIiwianRpIjoiY2UwNTg4YzgyYmJiMzA4YWM1OTU1ZjdlZWEwMjc4NWViYzQ3OTJmMWNjZmY3YmM3N2RiYTdiMmZiMzliM2IxOGUxNjY2ODFlNDQ1MGYxZjgiLCJpYXQiOjE1MzI3NzgwMjgsIm5iZiI6MTUzMjc3ODAyOCwiZXhwIjoxNTY0MzE0MDI4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.EdebRxSgPIjU74xyqZFI-HqAjQJlmICaCNohRQNEK4LG4t3aIOAdna1J4IlZbmX-LXc7NxrMpXtOUs9Ino9OPN6IOBqL1exG57hLdvzQLlBxyagtsa4OKhZLdWIkD_DlZCepalNjg2q9TN1SIb6INihaVHWr-cxWu3jy4I_1IO-hrJmGox_M2lpvF-gMKd5TRoS9nLSSOfXMG9kdkRu5sV0l4DHViq7DylLivfiP_xoCq67AzBGqwqQqQwx7UBjQYF0QcdDJOzmCm4xiSFGpDZJKww8V8xHkCTesD-k3Zmc5Mqx5M-COO_8dewsP2ifLyRbKN8m8gOqVhrJlT1Rgkb71bYsCISMQ3QzFk2Y6ju_bxdiHDSrs99wlK4GxfmqAtBuzFXkamw7P0Ay-hwzPEg2rV0M7Ui2F9e9wNKkVmibBxyPIzHSEGpNF_lNG1TJbmhAHwngZh17TwhOLqTXV71nDJpKFzQgX1dTGC4ORtlMVEgpbGlDDfH0hY51qDUp7t-c4Egsue8nI1uyQ-CBiste1bGCBlpCkG-6WEEoYcQ1l4zJLmYu_VrR82ROEkgNFYQ4seck90s_iP2_tZr8GoiTmwFdIHui95pFBceTZIFQNvQ6jwJeo58jjB7-Ye-JvmyPm59FQm5Vigy-nEsvfuOCE7wxcrGh9qx--wOvfYQs"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mobile",
+									"value": "01095594471",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "student",
+									"type": "text",
+									"description": "guardien , teacher , student"
+								}
+							]
+						},
+						"url": {
+							"raw": "winnerten.com/wini/public/api/get-question",
+							"host": [
+								"winnerten.com/wini/public/api/get-question"
+							]
+						},
+						"description": null
+					},
+					"response": [
+						{
+							"id": "f46e5204-32da-4515-87c8-c21658fda61b",
+							"name": "get question",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjViNDBjMjRhZjAzMzY2ZjY2NDYwNDQzNTdlYjkzZDIzNTBlZTA4N2QyY2U4MWU0NDM5NmM3NmUxZDA5MTBmOTJlY2ZiMzM1ODQ3YWI3NWIzIn0.eyJhdWQiOiIxIiwianRpIjoiNWI0MGMyNGFmMDMzNjZmNjY0NjA0NDM1N2ViOTNkMjM1MGVlMDg3ZDJjZTgxZTQ0Mzk2Yzc2ZTFkMDkxMGY5MmVjZmIzMzU4NDdhYjc1YjMiLCJpYXQiOjE1MzI3NzI2OTAsIm5iZiI6MTUzMjc3MjY5MCwiZXhwIjoxNTY0MzA4NjkwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TQF22kepc8p3JBdacO4lD-gXusLON2ameeEg2Bw8P-vNl_qa5F2JY73vheZc0pMzNpjlp2axD8_maiBeXQWXivkYenvG2d5T9mZK2bUYKKQbCY2uRhMEMkCONpms4agDNmo9HIKV4qAC1uL1t_bB43QYRuNA_19r2mcD8rXq20vTiFNWUXBJ5rJ0NOim2sDVmLJVGRYABiuNvVihaAm7Iz9WsHaHPun1LW1KMgLUzTCqq446G9JyAoNPiMEKKivFaL3wHkl1AvrZLD7YNk3wRb9Eu4lOu3Ny15BEsRevgMRyrtdvvG-8GtvEXpjOgJczsD_9WXBL10o6MXzrBO59UpKs7RkcFNxzr2hMddL5tZOViBBOTjgNbASkR4M7qq3KbBQ6tf2KadHqB9GyS7VEm5nkHQcP87n03fJ3HuaKpe31doh3UoFYwnciLUTAEmnRWZcRzDeRkpjiMOyRGwUDcT4_UmACT_7XcN0WeNeabN2EFuQDQhLddix6IrDX6Y-OlH5an-hyJc8zFsneOoiXaOV1pYcaTQOv1eobEr9BAZ44yihIsIWK3BmUYF4EB95RwRB2fG5m-g8DgxBP9lFIxsmRuLHJhHoVtasky7YcDQGojtEP3zbyNhRKy60tJMCwFrsLxXX9dxpQ9YXhjUeLfh0OieKEzKxomf9U-n2AKuU",
+										"disabled": false
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "mobile",
+											"value": "01095594471",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "student",
+											"type": "text",
+											"description": "guardien , teacher , student"
+										}
+									]
+								},
+								"url": {
+									"raw": "winnerten.com/wini/public/api/get-question",
+									"host": [
+										"winnerten.com/wini/public/api/get-question"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "179",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Jul 2018 10:46:19 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100",
+									"name": "Keep-Alive",
+									"description": "Custom header"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.28 (Unix) OpenSSL/1.0.2l PHP/7.1.10 mod_perl/2.0.8-dev Perl/v5.16.3",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization",
+									"name": "Vary",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.1.10",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60",
+									"name": "X-RateLimit-Limit",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58",
+									"name": "X-RateLimit-Remaining",
+									"description": "Custom header"
+								}
+							],
+							"cookie": [],
+							"responseTime": 254,
+							"body": "{\"data\":{\"questions_id\":3,\"created_at\":null,\"updated_at\":null,\"question\":\"questio 3 \",\"choice_1\":\"choice 1\",\"choice_2\":\"choice 2\",\"choice_3\":\"choice 3\",\"type\":\"multi\"},\"code\":200}"
+						}
+					]
+				},
+				{
+					"name": "send Answer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjViNDBjMjRhZjAzMzY2ZjY2NDYwNDQzNTdlYjkzZDIzNTBlZTA4N2QyY2U4MWU0NDM5NmM3NmUxZDA5MTBmOTJlY2ZiMzM1ODQ3YWI3NWIzIn0.eyJhdWQiOiIxIiwianRpIjoiNWI0MGMyNGFmMDMzNjZmNjY0NjA0NDM1N2ViOTNkMjM1MGVlMDg3ZDJjZTgxZTQ0Mzk2Yzc2ZTFkMDkxMGY5MmVjZmIzMzU4NDdhYjc1YjMiLCJpYXQiOjE1MzI3NzI2OTAsIm5iZiI6MTUzMjc3MjY5MCwiZXhwIjoxNTY0MzA4NjkwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TQF22kepc8p3JBdacO4lD-gXusLON2ameeEg2Bw8P-vNl_qa5F2JY73vheZc0pMzNpjlp2axD8_maiBeXQWXivkYenvG2d5T9mZK2bUYKKQbCY2uRhMEMkCONpms4agDNmo9HIKV4qAC1uL1t_bB43QYRuNA_19r2mcD8rXq20vTiFNWUXBJ5rJ0NOim2sDVmLJVGRYABiuNvVihaAm7Iz9WsHaHPun1LW1KMgLUzTCqq446G9JyAoNPiMEKKivFaL3wHkl1AvrZLD7YNk3wRb9Eu4lOu3Ny15BEsRevgMRyrtdvvG-8GtvEXpjOgJczsD_9WXBL10o6MXzrBO59UpKs7RkcFNxzr2hMddL5tZOViBBOTjgNbASkR4M7qq3KbBQ6tf2KadHqB9GyS7VEm5nkHQcP87n03fJ3HuaKpe31doh3UoFYwnciLUTAEmnRWZcRzDeRkpjiMOyRGwUDcT4_UmACT_7XcN0WeNeabN2EFuQDQhLddix6IrDX6Y-OlH5an-hyJc8zFsneOoiXaOV1pYcaTQOv1eobEr9BAZ44yihIsIWK3BmUYF4EB95RwRB2fG5m-g8DgxBP9lFIxsmRuLHJhHoVtasky7YcDQGojtEP3zbyNhRKy60tJMCwFrsLxXX9dxpQ9YXhjUeLfh0OieKEzKxomf9U-n2AKuU"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "questions_id",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "answer",
+									"value": "choice 1",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "winnerten.com/wini/public/api/send-answer",
+							"host": [
+								"winnerten.com/wini/public/api/send-answer"
+							]
+						},
+						"description": null
+					},
+					"response": [
+						{
+							"id": "d4ca3a4e-3593-4775-a1b9-4370a64f2550",
+							"name": "send Answer rigth ",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjViNDBjMjRhZjAzMzY2ZjY2NDYwNDQzNTdlYjkzZDIzNTBlZTA4N2QyY2U4MWU0NDM5NmM3NmUxZDA5MTBmOTJlY2ZiMzM1ODQ3YWI3NWIzIn0.eyJhdWQiOiIxIiwianRpIjoiNWI0MGMyNGFmMDMzNjZmNjY0NjA0NDM1N2ViOTNkMjM1MGVlMDg3ZDJjZTgxZTQ0Mzk2Yzc2ZTFkMDkxMGY5MmVjZmIzMzU4NDdhYjc1YjMiLCJpYXQiOjE1MzI3NzI2OTAsIm5iZiI6MTUzMjc3MjY5MCwiZXhwIjoxNTY0MzA4NjkwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TQF22kepc8p3JBdacO4lD-gXusLON2ameeEg2Bw8P-vNl_qa5F2JY73vheZc0pMzNpjlp2axD8_maiBeXQWXivkYenvG2d5T9mZK2bUYKKQbCY2uRhMEMkCONpms4agDNmo9HIKV4qAC1uL1t_bB43QYRuNA_19r2mcD8rXq20vTiFNWUXBJ5rJ0NOim2sDVmLJVGRYABiuNvVihaAm7Iz9WsHaHPun1LW1KMgLUzTCqq446G9JyAoNPiMEKKivFaL3wHkl1AvrZLD7YNk3wRb9Eu4lOu3Ny15BEsRevgMRyrtdvvG-8GtvEXpjOgJczsD_9WXBL10o6MXzrBO59UpKs7RkcFNxzr2hMddL5tZOViBBOTjgNbASkR4M7qq3KbBQ6tf2KadHqB9GyS7VEm5nkHQcP87n03fJ3HuaKpe31doh3UoFYwnciLUTAEmnRWZcRzDeRkpjiMOyRGwUDcT4_UmACT_7XcN0WeNeabN2EFuQDQhLddix6IrDX6Y-OlH5an-hyJc8zFsneOoiXaOV1pYcaTQOv1eobEr9BAZ44yihIsIWK3BmUYF4EB95RwRB2fG5m-g8DgxBP9lFIxsmRuLHJhHoVtasky7YcDQGojtEP3zbyNhRKy60tJMCwFrsLxXX9dxpQ9YXhjUeLfh0OieKEzKxomf9U-n2AKuU"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "questions_id",
+											"value": "11",
+											"type": "text"
+										},
+										{
+											"key": "answer",
+											"value": "choice 1",
+											"type": "text",
+											"description": ""
+										}
+									]
+								},
+								"url": {
+									"raw": "winnerten.com/wini/public/api/send-answer",
+									"host": [
+										"winnerten.com/wini/public/api/send-answer"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "66",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Jul 2018 11:27:12 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100",
+									"name": "Keep-Alive",
+									"description": "Custom header"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.28 (Unix) OpenSSL/1.0.2l PHP/7.1.10 mod_perl/2.0.8-dev Perl/v5.16.3",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization",
+									"name": "Vary",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.1.10",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60",
+									"name": "X-RateLimit-Limit",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59",
+									"name": "X-RateLimit-Remaining",
+									"description": "Custom header"
+								}
+							],
+							"cookie": [],
+							"responseTime": 315,
+							"body": "{\"data\":1,\"sucess\":true,\"message\":\"Rigth answer Bravo\",\"code\":200}"
+						},
+						{
+							"id": "0b58dc2e-37e7-43d8-a2d0-0da1c2c17dc5",
+							"name": "send Answer wrong",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjViNDBjMjRhZjAzMzY2ZjY2NDYwNDQzNTdlYjkzZDIzNTBlZTA4N2QyY2U4MWU0NDM5NmM3NmUxZDA5MTBmOTJlY2ZiMzM1ODQ3YWI3NWIzIn0.eyJhdWQiOiIxIiwianRpIjoiNWI0MGMyNGFmMDMzNjZmNjY0NjA0NDM1N2ViOTNkMjM1MGVlMDg3ZDJjZTgxZTQ0Mzk2Yzc2ZTFkMDkxMGY5MmVjZmIzMzU4NDdhYjc1YjMiLCJpYXQiOjE1MzI3NzI2OTAsIm5iZiI6MTUzMjc3MjY5MCwiZXhwIjoxNTY0MzA4NjkwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TQF22kepc8p3JBdacO4lD-gXusLON2ameeEg2Bw8P-vNl_qa5F2JY73vheZc0pMzNpjlp2axD8_maiBeXQWXivkYenvG2d5T9mZK2bUYKKQbCY2uRhMEMkCONpms4agDNmo9HIKV4qAC1uL1t_bB43QYRuNA_19r2mcD8rXq20vTiFNWUXBJ5rJ0NOim2sDVmLJVGRYABiuNvVihaAm7Iz9WsHaHPun1LW1KMgLUzTCqq446G9JyAoNPiMEKKivFaL3wHkl1AvrZLD7YNk3wRb9Eu4lOu3Ny15BEsRevgMRyrtdvvG-8GtvEXpjOgJczsD_9WXBL10o6MXzrBO59UpKs7RkcFNxzr2hMddL5tZOViBBOTjgNbASkR4M7qq3KbBQ6tf2KadHqB9GyS7VEm5nkHQcP87n03fJ3HuaKpe31doh3UoFYwnciLUTAEmnRWZcRzDeRkpjiMOyRGwUDcT4_UmACT_7XcN0WeNeabN2EFuQDQhLddix6IrDX6Y-OlH5an-hyJc8zFsneOoiXaOV1pYcaTQOv1eobEr9BAZ44yihIsIWK3BmUYF4EB95RwRB2fG5m-g8DgxBP9lFIxsmRuLHJhHoVtasky7YcDQGojtEP3zbyNhRKy60tJMCwFrsLxXX9dxpQ9YXhjUeLfh0OieKEzKxomf9U-n2AKuU",
+										"disabled": false
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "questions_id",
+											"value": "11",
+											"type": "text"
+										},
+										{
+											"key": "answer",
+											"value": "choice 122",
+											"type": "text",
+											"description": ""
+										}
+									]
+								},
+								"url": {
+									"raw": "winnerten.com/wini/public/api/send-answer",
+									"host": [
+										"winnerten.com/wini/public/api/send-answer"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "67",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Jul 2018 11:32:16 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100",
+									"name": "Keep-Alive",
+									"description": "Custom header"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.28 (Unix) OpenSSL/1.0.2l PHP/7.1.10 mod_perl/2.0.8-dev Perl/v5.16.3",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization",
+									"name": "Vary",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.1.10",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60",
+									"name": "X-RateLimit-Limit",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58",
+									"name": "X-RateLimit-Remaining",
+									"description": "Custom header"
+								}
+							],
+							"cookie": [],
+							"responseTime": 200,
+							"body": "{\"data\":0,\"sucess\":false,\"message\":\"wrong answer Bravo\",\"code\":401}"
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "wintop-admin",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "po23mn!@",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "c_password",
+									"value": "po23mn!@",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "eng.iessa.mostafa300720182320@gmail.com",
+									"description": "must be unique",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "07302018120",
+									"description": "must be unique",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "egypt",
+									"description": "can be null",
+									"type": "text"
+								},
+								{
+									"key": "lang",
+									"value": "ar",
+									"description": "ar , en",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "winnerten.com/wini/public/api/register-mobile",
+							"host": [
+								"winnerten.com/wini/public/api/register-mobile"
+							]
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "6bc90fa8-c0a7-46e4-a341-af2ebfb36745",
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"disabled": false
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "wintop-admin",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "po23mn!@",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "c_password",
+											"value": "po23mn!@",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "eng.iessa.mostafa300720182320@gmail.com",
+											"description": "must be unique",
+											"type": "text"
+										},
+										{
+											"key": "mobile",
+											"value": "07302018120",
+											"description": "must be unique",
+											"type": "text"
+										},
+										{
+											"key": "country",
+											"value": "egypt",
+											"description": "can be null",
+											"type": "text"
+										},
+										{
+											"key": "lang",
+											"value": "ar",
+											"description": "ar , en",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "winnerten.com/wini/public/api/register-mobile",
+									"host": [
+										"winnerten.com/wini/public/api/register-mobile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1353",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Jul 2018 07:23:24 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100",
+									"name": "Keep-Alive",
+									"description": "Custom header"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.28 (Unix) OpenSSL/1.0.2l PHP/7.1.10 mod_perl/2.0.8-dev Perl/v5.16.3",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.1.10",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60",
+									"name": "X-RateLimit-Limit",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58",
+									"name": "X-RateLimit-Remaining",
+									"description": "Custom header"
+								}
+							],
+							"cookie": [],
+							"responseTime": 579,
+							"body": "{\"status\":\"success\",\"data\":{\"UserDetails\":{\"name\":\"wintop-admin\",\"email\":\"eng.iessa.mostafa300720182320@gmail.com\",\"mobile\":\"07302018120\",\"country\":\"egypt\",\"lang\":\"ar\",\"updated_at\":\"2018-07-30 07:23:24\",\"created_at\":\"2018-07-30 07:23:24\",\"id\":16},\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjAxYzZlYTdmMGFmODA0MmQxZDFjNDJhMzAxY2RiZDQzYzAyY2VlNjNiN2NiZWQzZmVkYjJkMjE1OGM4YjhmZGUzNzZiODBjODA1NzgzZDU2In0.eyJhdWQiOiIxIiwianRpIjoiMDFjNmVhN2YwYWY4MDQyZDFkMWM0MmEzMDFjZGJkNDNjMDJjZWU2M2I3Y2JlZDNmZWRiMmQyMTU4YzhiOGZkZTM3NmI4MGM4MDU3ODNkNTYiLCJpYXQiOjE1MzI5MzU0MDQsIm5iZiI6MTUzMjkzNTQwNCwiZXhwIjoxNTY0NDcxNDA0LCJzdWIiOiIxNiIsInNjb3BlcyI6W119.S3EY_KTJClakMXJ839h0K4Hf1BEQEaZU2ZfmFOsJhUvB9Jh2zfHUsSG7DaD4ny1OdN0XDJFPdc3j5LoNAOKIXZrN2KeERzS_ZUPWx5HOPL0SrA6mpD_jmnWyvMumkTKp5TAfopIpe4YyISDIOHaNBdg1Sh1ZhmpfxAlaYiqgu-LNISwUfikd6_x-UGnBVdYBgrmKUyPJzhHpdExB6pnUYbFUA4vut6YNUfy42_Jcw4JQiCTcbgnKoL01A5xOTWiXundrduda9QcaWFM1sUukqeO7rZvgD2Jtaxi9gvGN3jaC93grlsuMR4_PC5qtVSMIniLPaPE4oAwNa3KJoT0qGuGolHqEoMlNaFjOj0IKaNU3-URuy96tUQbXwfFXFcd-2APdNOf4QpOFSYc8DpT7lQgmWYYtEvj9Th2F5KY5sp34LEFQvtSet5ylgg9-D0w95xoMVIJF7bdTebxLKhkV8-FrGv-2V5KWM8zzF6hw6gr4NUzCoJbmYXO-afePdBuYjFuB2ABu3M30Xqp3XzlmfO7aE-qs6P8ZAfsSrbqWoNoGuBS6_E5DmLVNfeTPH4jOkPBf3YpQXe93Y4Sqij9sSOntyOSrlT6lnHQ8vKb3HFv6Gf_tW7e_sWDjDA-hnB2NRNfZxL-MFcXbOAwdNeMXg5OK4m4JVHQqEBBAPLJTJ3Y\",\"name\":\"wintop-admin\"}}"
+						},
+						{
+							"id": "a49a28e7-0221-41eb-a645-0e8dfc7d7ddd",
+							"name": "Error Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"disabled": false
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "wintop-admin",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "po23mn!@",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "c_password",
+											"value": "po23mn!@",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "eng.iessa.mostafa300720182320@gmail.com",
+											"description": "must be unique",
+											"type": "text"
+										},
+										{
+											"key": "mobile",
+											"value": "07302018120",
+											"description": "must be unique",
+											"type": "text"
+										},
+										{
+											"key": "country",
+											"value": "egypt",
+											"description": "can be null",
+											"type": "text"
+										},
+										{
+											"key": "lang",
+											"value": "ar",
+											"description": "ar , en",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "winnerten.com/wini/public/api/register-mobile",
+									"host": [
+										"winnerten.com/wini/public/api/register-mobile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "122",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 30 Jul 2018 07:23:42 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100",
+									"name": "Keep-Alive",
+									"description": "Custom header"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.28 (Unix) OpenSSL/1.0.2l PHP/7.1.10 mod_perl/2.0.8-dev Perl/v5.16.3",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.1.10",
+									"name": "X-Powered-By",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60",
+									"name": "X-RateLimit-Limit",
+									"description": "Custom header"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57",
+									"name": "X-RateLimit-Remaining",
+									"description": "Custom header"
+								}
+							],
+							"cookie": [],
+							"responseTime": 162,
+							"body": "{\"status\":\"error\",\"error\":{\"email\":[\"The email has already been taken.\"],\"mobile\":[\"The mobile has already been taken.\"]}}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
