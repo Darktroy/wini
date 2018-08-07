@@ -11,7 +11,7 @@
 
         <div class="pull-right">
 
-            <form method="POST" action="{!! route('questions.questions.destroy', $questions->id) !!}" accept-charset="UTF-8">
+            <form method="POST" action="{!! route('questions.questions.destroy', $questions->questions_id) !!}" accept-charset="UTF-8">
             <input name="_method" value="DELETE" type="hidden">
             {{ csrf_field() }}
                 <div class="btn-group btn-group-sm" role="group">
@@ -23,7 +23,7 @@
                         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                     </a>
                     
-                    <a href="{{ route('questions.questions.edit', $questions->id ) }}" class="btn btn-primary" title="Edit Questions">
+                    <a href="{{ route('questions.questions.edit', $questions->questions_id ) }}" class="btn btn-primary" title="Edit Questions">
                         <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                     </a>
 
@@ -40,7 +40,7 @@
     <div class="panel-body">
         <dl class="dl-horizontal">
             <dt>Question</dt>
-            <dd>{{ $questions->id }}</dd>
+            <dd>{{ $questions->questions_id }}</dd>
             <dt>Question</dt>
             <dd>{{ $questions->question }}</dd>
             <dt>Choice 1</dt>

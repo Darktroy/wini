@@ -16,15 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::middleware('auth:web')->group(function(){
-    
-//        Route::get('', function () {
-//                 dd('q23 '.__FILE__);   
-//            });
         Route::group(['prefix' => 'questions',], function () {
-//            dd('24 '.__FILE__);questions
-//              dd('25 '.__FILE__);
-
-//            Route::any('', 'QuestionsController@index')->name('questions.questions.index');
             
             Route::get('', 'QuestionsController@index')->name('questions.questions.index');
         //    Route::get('/', 'QuestionsController@index')->name('questions.questions.index');

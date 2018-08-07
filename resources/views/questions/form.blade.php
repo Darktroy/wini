@@ -1,20 +1,4 @@
 
-<div class="form-group {{ $errors->has('id') ? 'has-error' : '' }}">
-    <label for="id" class="col-md-2 control-label">Question</label>
-    <div class="col-md-10">
-        <select class="form-control" id="id" name="id">
-        	    <option value="" style="display: none;" {{ old('id', optional($questions)->id ?: '') == '' ? 'selected' : '' }} disabled selected>Select question</option>
-        	@foreach ([] as $key => $text)
-			    <option value="{{ $key }}" {{ old('id', optional($questions)->id) == $key ? 'selected' : '' }}>
-			    	{{ $text }}
-			    </option>
-			@endforeach
-        </select>
-        
-        {!! $errors->first('id', '<p class="help-block">:message</p>') !!}
-    </div>
-</div>
-
 <div class="form-group {{ $errors->has('question') ? 'has-error' : '' }}">
     <label for="question" class="col-md-2 control-label">Question</label>
     <div class="col-md-10">
@@ -23,6 +7,38 @@
     </div>
 </div>
 
+<div class="form-group {{ $errors->has('type') ? 'has-error' : '' }}">
+    <label for="type" class="col-md-2 control-label">Type</label>
+    <div class="col-md-10">
+        <select class="form-control" id="type" name="type">
+        	    <option value="" style="display: none;"  disabled selected>Select question</option>
+        	
+			    <option value="multi" >
+                                Multi Choice
+			    </option>
+			    <option value="correction" >
+                                Correction
+			    </option>
+        </select>
+        
+    </div>
+</div>
+
+<div class="form-group {{ $errors->has('lang') ? 'has-error' : '' }}">
+    <label for="lang" class="col-md-2 control-label">Language</label>
+    <div class="col-md-10">
+        <select class="form-control" id="type" name="lang">
+        	    <option value="" style="display: none;"  disabled selected>Select Language</option>
+                            <option value="ar" >
+                                Arabic
+			    </option>
+			    <option value="en" >
+                                English
+			    </option>
+        </select>
+        
+    </div>
+</div>
 <div class="form-group {{ $errors->has('choice_1') ? 'has-error' : '' }}">
     <label for="choice_1" class="col-md-2 control-label">Choice 1</label>
     <div class="col-md-10">
@@ -47,11 +63,11 @@
     </div>
 </div>
 
-<div class="form-group {{ $errors->has('type') ? 'has-error' : '' }}">
-    <label for="type" class="col-md-2 control-label">Type</label>
+<div class="form-group }}">
+    <label for="answer" class="col-md-2 control-label">the Correct answer</label>
     <div class="col-md-10">
-        <input class="form-control" name="type" type="text" id="type" value="{{ old('type', optional($questions)->type) }}" minlength="1" placeholder="Enter type here...">
-        {!! $errors->first('type', '<p class="help-block">:message</p>') !!}
+        <input class="form-control" name="answer" type="text" id="rigthanswer" value="{{ old('answer', optional($questions)->rigthanswer) }}" minlength="1" placeholder="Enter the correct answer here...">
+        {!! $errors->first('answer', '<p class="help-block">:message</p>') !!}
     </div>
 </div>
 

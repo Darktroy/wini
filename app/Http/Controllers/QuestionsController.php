@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\questions;
+use \App\Models\q_answer;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
     use Illuminate\Support\Facades\Auth; 
@@ -63,12 +64,25 @@ class QuestionsController extends Controller
      */
     public function store(Request $request)
     {
+     /*array:7 [▼
+  "_token" => "Ty1iEJOCxVt6iDug1iBlI1AdDOgsdSCEa1g0OFAb"
+  "question" => "test 1"
+  "type" => "multi"
+  "choice_1" => "c1"
+  "choice_2" => "c2"
+  "choice_3" => "c3"
+  "rigthanswer" => "c3"
+]*/   
         try {
             
             $data = $this->getData($request);
             
-            questions::create($data);
-
+            $question = questions::create($data);
+            $data = $request->all();
+            q_answer::create(array('questions_id'=>$question->questions_id,
+                'answer'=>$data['answer']));
+//            'questions_id',1
+//                  'answer'
             return redirect()->route('questions.questions.index')
                              ->with('success_message', 'Questions was successfully added!');
 

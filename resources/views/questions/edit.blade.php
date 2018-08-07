@@ -32,7 +32,7 @@
                 </ul>
             @endif
 
-            <form method="POST" action="{{ route('questions.questions.update', $questions->id) }}" id="edit_questions_form" name="edit_questions_form" accept-charset="UTF-8" class="form-horizontal">
+            <form method="POST" action="{{ route('questions.questions.update', $questions->questions_id) }}" id="edit_questions_form" name="edit_questions_form" accept-charset="UTF-8" class="form-horizontal">
             {{ csrf_field() }}
             <input name="_method" type="hidden" value="PUT">
             @include ('questions.form', [
