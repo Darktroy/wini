@@ -32,10 +32,11 @@ class QuestionsController extends Controller
         try {
             DB::beginTransaction();
             $user = Auth::user(); 
+            
             $quetion_obj = new questions();
             $quetion = $quetion_obj->getNewQuestion($user->id);
             DB::commit();
-            return response()->json(['data'=>$quetion,'code'=>200], $this->successStatus);
+            return response()->json(['data'=>$quetion,'score'=>$user->score,'code'=>200], $this->successStatus);
         } catch (Exception $exc) {
             DB::rollBack(); 
             return response()->json(['message' => $exception->getMessage(),'code'=>500 ], 200);
