@@ -55,7 +55,10 @@ class QuestionsController extends Controller
     {
         return view('questions.create');
     }
-
+    public function createImage()
+    {
+        return view('questions.createIMAGE');
+    }
     /**
      * Store a new questions in the storage.
      *
@@ -75,11 +78,46 @@ class QuestionsController extends Controller
   "rigthanswer" => "c3"
 ]*/   
         try {
-            
+            $user = Auth::user();
             $data = $this->getData($request);
-            
             $question = questions::create($data);
             $data = $request->all();
+            q_answer::create(array('questions_id'=>$question->questions_id,
+                'answer'=>$data['answer']));
+//            'questions_id',1
+//                  'answer'
+            return redirect()->route('questions.questions.index')
+                             ->with('success_message', 'Questions was successfully added!');
+
+        } catch (Exception $exception) {
+
+            return back()->withInput()
+                         ->withErrors(['unexpected_error' => 'Unexpected error occurred while trying to process your request!']);
+        }
+    }
+
+    public function storeImage(Request $request)
+    {
+        try {
+            $user = Auth::user();
+            $data = $this->getData($request);
+            
+            $data = $request->all();
+            if ($request->hasFile('questionImage') 
+//                    && is_file($data['questionImage'])
+                    ){ 
+//            dd($data);
+                $file = $request->file('questionImage');
+                $ext = strtolower($file->getClientOriginalExtension());
+                    $imageName = 'nasr_'. md5($user->id).'.'.$ext;
+                    $data['questionImage']->move(public_path('/nasr'), $imageName);
+//                $data['logo'] =helperVars::$logoPath.$imageName;
+                $imageName = '/nasr/'.$imageName;
+                $data['question'] =url($imageName);
+//                dd($data);
+//                dd(url($imageName));
+            } 
+            $question = questions::create($data);
             q_answer::create(array('questions_id'=>$question->questions_id,
                 'answer'=>$data['answer']));
 //            'questions_id',1

@@ -22,12 +22,14 @@ Route::middleware('auth:web')->group(function(){
         //    Route::get('/', 'QuestionsController@index')->name('questions.questions.index');
         //
             Route::get('/create','QuestionsController@create')->name('questions.questions.create');
+            Route::get('/createImage','QuestionsController@createImage')->name('questions.questions.create');
 
             Route::get('/show/{questions}','QuestionsController@show')->name('questions.questions.show')->where('id', '[0-9]+');
 
             Route::get('/{questions}/edit','QuestionsController@edit')->name('questions.questions.edit')->where('id', '[0-9]+');
 
             Route::post('/', 'QuestionsController@store')->name('questions.questions.store');
+            Route::post('/imageQestion', 'QuestionsController@storeImage')->name('questions.questions.store');
 
             Route::put('questions/{questions}', 'QuestionsController@update')->name('questions.questions.update')->where('id', '[0-9]+');
 
