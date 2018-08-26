@@ -63,7 +63,11 @@
 <div class="form-group }}">
     <label for="answer" class="col-md-2 control-label">the Correct answer</label>
     <div class="col-md-10">
-        <input class="form-control" name="answer" type="text" id="rigthanswer" value="{{ old('answer', optional($questions)->rigthanswer) }}" minlength="1" placeholder="Enter the correct answer here...">
+        <select name="answer">
+            <option value="1">choice 1</option>
+            <option value="2">choice 2</option>
+            <option value="3">choice 3</option>\
+          </select>
         {!! $errors->first('answer', '<p class="help-block">:message</p>') !!}
     </div>
 </div>

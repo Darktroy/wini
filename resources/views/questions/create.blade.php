@@ -29,7 +29,7 @@
                 </ul>
             @endif
           
-            <form method="POST" action="{{ route('questions.questions.store') }}" 
+            <form method="POST" action="{{ route('questions.questions.storenormal') }}" 
                   accept-charset="UTF-8" id="create_questions_form" name="create_questions_form" 
                   class="form-horizontal">
             {{ csrf_field() }}

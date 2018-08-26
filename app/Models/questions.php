@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use App\Models\question_to_user;
+use App\Models\q_answer;
 use Exception;
 
 class questions extends Model
@@ -71,6 +72,11 @@ class questions extends Model
                 'user_id'=>$user_id));
         }
         return $question;
+    }
+    
+    public function questionAnswer() {
+        return $this->hasOne('App\Models\q_answer', 'questions_id');
+        
     }
 
 

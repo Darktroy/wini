@@ -84,7 +84,7 @@ class QAnswersController extends Controller
                     ->where('answer',$data['answer'])->get();
             if(count($doesAnswerTRigth)>0){
                 DB::beginTransaction();
-                User::where('id',$user->id)->increment('score',1);
+                User::where('id',$user->id)->increment('score',10);
                 DB::commit();
                 $user = Auth::user(); 
                 $score =  User::where('id',$user->id)->get();

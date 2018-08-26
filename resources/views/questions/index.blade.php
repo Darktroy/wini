@@ -27,6 +27,12 @@
                 </a>
             </div>
 
+            <div class="btn-group btn-group-sm pull-right" role="group">
+                <a href="{{ route('questions.questions.createImage') }}" class="btn btn-info" title="Create New Questions">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                </a>
+            </div>
+
         </div>
         
         @if(count($questionsObjects) == 0)
@@ -45,6 +51,7 @@
                             <th>Choice 1</th>
                             <th>Choice 2</th>
                             <th>Choice 3</th>
+                            <th> Answer </th>
                             <th>Type</th>
 
                             <th></th>
@@ -53,23 +60,24 @@
                     <tbody>
                     @foreach($questionsObjects as $questions)
                         <tr>
-                            <td>{{ $questions->questions_id }}</td>
-                            <td>{{ $questions->question }}</td>
-                            <td>{{ $questions->choice_1 }}</td>
-                            <td>{{ $questions->choice_2 }}</td>
-                            <td>{{ $questions->choice_3 }}</td>
-                            <td>{{ $questions->type }}</td>
+                            <td>{{ $questions['questions_id'] }}</td>
+                            <td>{{ $questions['question'] }}</td>
+                            <td>{{ $questions['choice_1'] }}</td>
+                            <td>{{ $questions['choice_2'] }}</td>
+                            <td>{{ $questions['choice_3'] }}</td>
+                            <td>{{ $questions['answer'] }}</td>
+                            <td>{{ $questions['type'] }}</td>
 
                             <td>
-                            <form method="POST" action="{!! route('questions.questions.destroy', $questions->questions_id) !!}" accept-charset="UTF-8">
+                            <form method="POST" action="{!! route('questions.questions.destroy', $questions['questions_id']) !!}" accept-charset="UTF-8">
                                 <input name="_method" value="DELETE" type="hidden">
                                 {{ csrf_field() }}
 
                                     <div class="btn-group btn-group-xs pull-right" role="group">
-                                        <a href="{{ route('questions.questions.show', $questions->questions_id ) }}" class="btn btn-info" title="Show Questions">
+                                        <a href="{{ route('questions.questions.show', $questions['questions_id'] ) }}" class="btn btn-info" title="Show Questions">
                                             <span class="glyphicon glyphicon-open" aria-hidden="true"></span>
                                         </a>
-                                        <a href="{{ route('questions.questions.edit', $questions->questions_id ) }}" class="btn btn-primary" title="Edit Questions">
+                                        <a href="{{ route('questions.questions.edit', $questions['questions_id'] ) }}" class="btn btn-primary" title="Edit Questions">
                                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                                         </a>
 
@@ -90,7 +98,6 @@
         </div>
 
         <div class="panel-footer">
-            {!! $questionsObjects->render() !!}
         </div>
         
         @endif

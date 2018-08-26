@@ -24,7 +24,22 @@ class QuestionsController extends Controller
      */
     public function index()
     {
-        $questionsObjects = questions::paginate(25);
+        $questionsObjects_row = questions::with('questionAnswer')->get();
+        $questionsObjects = array();
+        $i = 0;
+//        dd($questionsObjects_row);
+        foreach ($questionsObjects_row as $key => $value) {
+            
+            if(!empty($value['questionAnswer']->answer)){
+                $i++;
+                $questionsObjects[] = array('questions_id'=>$i,'question'=> $value['question']
+                    ,'choice_1'=> $value['choice_1'],'choice_2'=> $value['choice_2']
+                    ,'choice_3'=> $value['choice_3'],'answer'=>$value['questionAnswer']->answer,
+                'type'=> $value['type'] );
+
+            }
+        }
+//        dd($questionsObjects);
         return view('questions.index', compact('questionsObjects'));
     }
 
@@ -67,23 +82,22 @@ class QuestionsController extends Controller
      * @return Illuminate\Http\RedirectResponse | Illuminate\Routing\Redirector
      */
     public function store(Request $request)
-    {
-     /*array:7 [▼
-  "_token" => "Ty1iEJOCxVt6iDug1iBlI1AdDOgsdSCEa1g0OFAb"
-  "question" => "test 1"
-  "type" => "multi"
-  "choice_1" => "c1"
-  "choice_2" => "c2"
-  "choice_3" => "c3"
-  "rigthanswer" => "c3"
-]*/   
+    {       
         try {
             $user = Auth::user();
             $data = $this->getData($request);
+            
             $question = questions::create($data);
             $data = $request->all();
+            $theanswer = $data['choice_3'];
+            if($data['answer']=="2"){
+                $theanswer = $data['choice_2'];
+            }
+            if($data['answer']=="1"){
+                $theanswer = $data['choice_1'];
+            }
             q_answer::create(array('questions_id'=>$question->questions_id,
-                'answer'=>$data['answer']));
+                'answer'=>$theanswer));
 //            'questions_id',1
 //                  'answer'
             return redirect()->route('questions.questions.index')
@@ -98,28 +112,35 @@ class QuestionsController extends Controller
 
     public function storeImage(Request $request)
     {
+        $st1 = str_replace(':', '', now());
+        $st2 = str_replace('-', '', $st1);
+        $st3 = str_replace(' ', '', $st2);
         try {
             $user = Auth::user();
             $data = $this->getData($request);
             
             $data = $request->all();
+            $theanswer = $data['choice_3'];
+            if($data['answer']=="2"){
+                $theanswer = $data['choice_2'];
+            }
+            if($data['answer']=="1"){
+                $theanswer = $data['choice_1'];
+            }
             if ($request->hasFile('questionImage') 
 //                    && is_file($data['questionImage'])
                     ){ 
 //            dd($data);
                 $file = $request->file('questionImage');
                 $ext = strtolower($file->getClientOriginalExtension());
-                    $imageName = 'nasr_'. md5($user->id).'.'.$ext;
+                    $imageName = 'nasr_'. md5($st3). md5($user->id).'.'.$ext;
                     $data['questionImage']->move(public_path('/nasr'), $imageName);
-//                $data['logo'] =helperVars::$logoPath.$imageName;
                 $imageName = '/nasr/'.$imageName;
                 $data['question'] =url($imageName);
-//                dd($data);
-//                dd(url($imageName));
             } 
             $question = questions::create($data);
             q_answer::create(array('questions_id'=>$question->questions_id,
-                'answer'=>$data['answer']));
+                'answer'=>$theanswer));
 //            'questions_id',1
 //                  'answer'
             return redirect()->route('questions.questions.index')
@@ -221,12 +242,11 @@ class QuestionsController extends Controller
     protected function getData(Request $request)
     {
         $rules = [
-            'id' => 'nullable',
-            'question' => 'string|min:1|nullable',
-            'choice_1' => 'string|min:1|nullable',
-            'choice_2' => 'string|min:1|nullable',
-            'choice_3' => 'string|min:1|nullable',
-            'type' => 'string|min:1|nullable',
+            'question' => 'required|string|min:1|unique:questions,question',
+            'choice_1' => 'required|string|min:1',
+            'choice_2' => 'required|string|min:1',
+            'choice_3' => 'string|nullable',
+            'type' => 'required|string|min:1',
      
         ];
         
