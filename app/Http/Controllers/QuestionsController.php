@@ -112,12 +112,13 @@ class QuestionsController extends Controller
 
     public function storeImage(Request $request)
     {
+//        dd(__LINE__);
         $st1 = str_replace(':', '', now());
         $st2 = str_replace('-', '', $st1);
         $st3 = str_replace(' ', '', $st2);
         try {
             $user = Auth::user();
-            $data = $this->getData($request);
+            $data = $this->getDataImage($request);
             
             $data = $request->all();
             $theanswer = $data['choice_3'];
@@ -128,9 +129,8 @@ class QuestionsController extends Controller
                 $theanswer = $data['choice_1'];
             }
             if ($request->hasFile('questionImage') 
-//                    && is_file($data['questionImage'])
+                    && is_file($data['questionImage'])
                     ){ 
-//            dd($data);
                 $file = $request->file('questionImage');
                 $ext = strtolower($file->getClientOriginalExtension());
                     $imageName = 'nasr_'. md5($st3). md5($user->id).'.'.$ext;
@@ -256,4 +256,20 @@ class QuestionsController extends Controller
         return $data;
     }
 
+    protected function getDataImage(Request $request)
+    {
+        $rules = [
+            'questionImage' => 'required|image|min:1',
+            'choice_1' => 'required|string|min:1',
+            'choice_2' => 'required|string|min:1',
+            'choice_3' => 'string|nullable',
+            'type' => 'required|string|min:1',
+     
+        ];
+        
+        $data = $request->validate($rules);
+
+
+        return $data;
+    }
 }
